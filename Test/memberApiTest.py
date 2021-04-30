@@ -13,9 +13,9 @@ class member():
     #连接本地redis
     conn_redis = redis.Redis(host='localhost',port='6379',db=0)
     #设置URL头部（测试环境）
-    sit_url = 'http://km-test.gtmsh.com'
+    sit_url = 'http://km-test.gtmsh.com/'
     #设置URL头部（生产环境）
-    prod_url = 'http://wxapi.gtmsh.com'
+    prod_url = 'http://wxapi.gtmsh.com/'
     #请求头部信息
     headers = {'Content-Type': 'application/x-www-form-urlencoded'}
 
