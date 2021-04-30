@@ -36,7 +36,7 @@ class member():
         payload = 'custid='+custid+'&act=GetToken&random='+self.randoms+'&username='+username+'&password='+password
         response = requests.request('post',url,headers=self.headers,data=payload)
         token = _jsonpath(response,'$.data')
-        return token
+        return token[0]
 c = member()
 token=c.get_token("823882")
 print(token)
