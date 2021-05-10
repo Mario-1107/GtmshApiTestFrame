@@ -36,8 +36,8 @@ class member():
         :return: 返回token
         '''
         if self.custid == "823882":
-            username = 'shangyou'
-            password = 'gtmsh123@..'
+            username = 'ThirdWM'
+            password = 'ThirdWM003'
         elif self.custid == "823883":
             username = 'SaJiaoSmallAPP'
             password = 'SaJiaoSmallAPP001'
@@ -75,9 +75,7 @@ class member():
 
     def get_VipInfoByTele(self,mobile):
         '''
-        根据手机号获取会员
-        :param custid:品牌号
-        :param token:
+        根据手机号查询会员号
         :param mobile:手机号
         :return:会员号
         '''
@@ -90,9 +88,10 @@ class member():
     def scoreOperate(self,cardnumber,score='1000',type='101'):
         '''
         积分操作接口
-        :param cardnumber:会员号
-        :param score:积分值
-        :return:接口请求结果
+        :param cardnumber: 会员号或手机号
+        :param score:积分数
+        :param type:积分类型
+        :return:请求结果
         '''
         #如果传入的是手机号，先调用「根据手机号获取会员」接口获取到会员号
         if len(cardnumber) == 11:
@@ -102,9 +101,67 @@ class member():
         response = requests.request("POST", url, headers=self.headers, data=payload)
         print("操作会员为：%s"%cardnumber+";操作积分数：%s"%score+";接口响应结果："+response.text)
 
-# c = member('823882')
-# vipno = c.scoreOperate("18682241673","-1000")
+    def vip_FillMoney(self,cardnumber,fillmoney=1000,type=0):
+        '''
+        会员余额充值
+        :param cardnumber: 会员号或手机号
+        :param fillmoney:充值金额，默认1000
+        :param type:小程序充值 = 0, 外带退款 = 1, 体验官活动 = 2
+        :return:请求结果
+        '''
+        if len(cardnumber) == 11:
+            cardnumber = self.get_VipInfoByTele(cardnumber)
+        url = self.sit_url + 'ThirdApiHandler/VipHandler.ashx'
+        payload = {'custid': self.custid, 'act': 'VipFillMoney', 'random': self.randoms, 'token': self.token, 'cardnumber': cardnumber,'fillmoney': fillmoney, 'transaction_id': self.randoms, 'out_trade_no': self.randoms, 'type': type}
+        response = requests.request("POST", url, headers=self.headers, data=payload)
+        print(response.text)
 
+    def get_DynamicCode(self,cardnumber):
+        '''
+        获取会员动态码
+        :param cardnumber: 会员号或手机号
+        :return:会员动态码
+        '''
+        if len(cardnumber) == 11:
+            cardnumber = self.get_VipInfoByTele(cardnumber)
+        url = self.sit_url + 'ThirdApiHandler/VipHandler.ashx'
+        payload = {'custid': self.custid, 'act': 'GetDynamicCode', 'random': self.randoms, 'token': self.token,'cardnumber': cardnumber}
+        response = requests.request("POST", url, headers=self.headers, data=payload)
+        #vipcode = _jsonpath(response,'$.data')
+        print(response.text)
 
+    def get_Bills(self,branchno,tableno,unionid='oxvw21QlHBkA289XhFbHIL1MolJw'):
+        '''
+        拉取账单接口
+        :param branchno: 门店编号
+        :param tableno:台位号
+        :param unionid:用户unionid
+        :return:接口返回结果
+        '''
+        url = self.sit_url + 'ThirdApiHandler/VipHandler.ashx'
+        payload = {'custid': self.custid, 'act': 'GetBills', 'random': self.randoms, 'token': self.token, 'unionid': unionid,'branchno': branchno, 'tableno': tableno}
+        response = requests.request("POST", url, headers=self.headers, data=payload)
+        print(response.text)
 
+    def get_BillsByThirdNo(self,branchno,thirdno):
+        '''
+        拉取账单接口(根据第三方编号)
+        :param branchno:门店编号
+        :param thirdno:第三方订单编号
+        :return:接口返回结果
+        '''
+        url = self.sit_url + 'ThirdApiHandler/VipHandler.ashx'
+        payload = {'custid':self.custid,'act':'GetBillsByThirdNo','random':self.randoms,'token':self.token,'branchno':branchno,'thirdno':thirdno}
+        response = requests.request("POST",url,headers=self.headers,data=payload)
+        print(response.text)
 
+    def get_vipinfo(self,unionid='oxvw21QlHBkA289XhFbHIL1MolJw'):
+        '''
+        获取会员信息
+        :param unionid:用户unionid
+        :return:接口返回信息
+        '''
+        url = self.sit_url + 'ThirdApiHandler/VipHandler.ashx'
+        payload = {'custid':self.custid,'act':'GetVipInfo','random':self.randoms,'token':self.token,'unionid':unionid}
+        response = requests.request("POST",url,headers=self.headers,data=payload)
+        print(response.text)
