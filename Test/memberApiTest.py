@@ -7,6 +7,7 @@
 """
 import random,string,redis,requests
 from Comm.functions import _randoms,_jsonpath,_orderNo
+#from Conf.config
 class member():
     #生成指定位数随机数
     randoms = _randoms(32)
