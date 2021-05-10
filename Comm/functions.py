@@ -5,7 +5,7 @@
 @time:2021/04/30
 @describe：公用方法
 """
-import random,string,jsonpath,json
+import random,string,jsonpath,json,time
 
 def _randoms(length):
     '''
@@ -29,3 +29,6 @@ def _jsonpath(response,value):
     result = jsonpath.jsonpath(responses,"%s" % value)
     return result
 
+def _orderNo():
+   orderno = str(int((time.time() * 1000)))
+   return orderno

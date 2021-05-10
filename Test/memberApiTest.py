@@ -6,7 +6,7 @@
 @describe：微平台相关接口
 """
 import random,string,redis,requests
-from Comm.functions import _randoms,_jsonpath
+from Comm.functions import _randoms,_jsonpath,_orderNo
 class member():
     #生成指定位数随机数
     randoms = _randoms(32)
@@ -165,3 +165,28 @@ class member():
         payload = {'custid':self.custid,'act':'GetVipInfo','random':self.randoms,'token':self.token,'unionid':unionid}
         response = requests.request("POST",url,headers=self.headers,data=payload)
         print(response.text)
+
+    def get_AdvancedVipInfo(self,unionid='oxvw21QlHBkA289XhFbHIL1MolJw',type='0'):
+        '''
+        获取用户高级信息接口
+        :param unionid:用户unionid
+        :param type:渠道类型:微信=0,美团=1,不传默认为 0
+        :return:接口返回结果
+        '''
+        url = self.sit_url + 'ThirdApiHandler/VipHandler.ashx'
+        payload = {'custid':self.custid,'act':'GetAdvancedVipInfo','random':self.randoms,'token':self.token,'unionid':unionid,'type':type}
+        reponse = requests.request("POST",url,headers=self.headers,data=payload)
+        print(reponse.text)
+
+    def submitOrderMeal(self,branchno='5999'):
+        '''
+        点餐/加菜接口
+        :param branchno:门店编号
+        :param meal:菜品信息：参数为 json
+        :return:接口响应内容
+        '''
+        url = self.sit_url + 'ThirdApiHandler/VipHandler.ashx'
+        payload = {'custid':self.custid,'act':'SubmitOrderMeal','random':self.randoms,'token':self.token,'branchno':branchno,'meal':'{"tablenumber":"01","totalprice":101.00,"realprice":101.00,"order_id":'+_orderNo()+',"people":2,"as_cvipno":"990000007052","listmealdetail":[{"nPrc":20,"cfood_c":"18100021","bmainfood":0,"unionid":"oxvw21XMFjq5wOR5JiLeMieBIEBA","suitflag":0,"foodtime":"1","ndisrate":0,"ordernum":"1010000059344-2-1","sMade":"免薄荷叶##191","cfood_n":"半价柠檬冰桔茶","nqty":1,"sunit":"杯","order_id":'+_orderNo()+'},{"nPrc":20,"cfood_c":"10120008","bmainfood":0,"unionid":"oxvw21XMFjq5wOR5JiLeMieBIEBA","suitflag":0,"foodtime":"2","cfood_n":"金针菇","ndisrate":0,"ordernum":"1010000059344-2-2","nqty":1,"sunit":"份","order_id":'+_orderNo()+'},{"nPrc":20,"cfood_c":"10120035","bmainfood":0,"unionid":"oxvw21XMFjq5wOR5JiLeMieBIEBA","suitflag":0,"foodtime":"3","cfood_n":"血旺","ndisrate":0,"ordernum":"1010000059344-2-3","nqty":1,"sunit":"份","order_id":'+_orderNo()+'},{"nPrc":20,"cfood_c":"10110003","bmainfood":0,"unionid":"oxvw21XMFjq5wOR5JiLeMieBIEBA","suitflag":0,"foodtime":"4","ndisrate":0,"ordernum":"1010000059344-2-4-1","sMade":"香辣味+1.00,不加葱加辣##001,059","cfood_n":"大鮰鱼","nqty":1,"order_id":'+_orderNo()+'},{"nPrc":20,"cfood_c":"10120032","bmainfood":0,"unionid":"oxvw21XMFjq5wOR5JiLeMieBIEBA","suitflag":0,"foodtime":"4","cfood_n":"泡饼(辅菜)","ndisrate":0,"ordernum":"1010000059344-2-4-2","nqty":1,"order_id":'+_orderNo()+'}]}'}
+        reponse = requests.request('POST',url,headers=self.headers,data=payload)
+        print(payload)
+        print(reponse.text)

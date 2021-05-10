@@ -6,10 +6,10 @@
 @describe：
 """
 from Test.memberApiTest import member
+from Comm.functions import _orderNo
 test = member("823882")
 
-test.get_vipinfo()
-
+test.submitOrderMeal()
 
 
 
