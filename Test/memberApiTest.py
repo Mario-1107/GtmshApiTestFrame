@@ -13,7 +13,7 @@ class member():
     #连接本地redis
     conn_redis = redis.Redis(host='localhost',port='6379',db=0)
     #设置URL头部（测试环境）
-    sit_url = 'http://km-test.gtmsh.com/'
+    sit_url = 'http://km-test.gtmsh.com/WX_Food_Tanyu/'
     #设置URL头部（生产环境）
     prod_url = 'http://wxapi.gtmsh.com/'
     #请求头部信息
@@ -21,10 +21,14 @@ class member():
     #定义基本属性
     custid = ''
     token = ''
+
     def __init__(self,custid):
+        '''
+        构造函数，赋予初始值
+        :param custid:品牌码
+        '''
         self.custid = custid
         self.token = self.get_redis_token()
-
 
     def get_token(self):
         '''
@@ -43,7 +47,7 @@ class member():
         elif self.custid == "823885":
             username = 'gsdx'
             password = 'gsdx123'
-        url = self.prod_url + 'ThirdApiHandler/VipHandler.ashx'
+        url = self.sit_url + 'ThirdApiHandler/VipHandler.ashx'
         payload = 'custid='+self.custid+'&act=GetToken&random='+self.randoms+'&username='+username+'&password='+password
         response = requests.request('post',url,headers=self.headers,data=payload)
         token = _jsonpath(response,'$.data')
@@ -77,7 +81,7 @@ class member():
         :param mobile:手机号
         :return:会员号
         '''
-        url = self.sit_url + 'WX_Food_Tanyu/ThirdApiHandler/VipHandler.ashx'
+        url = self.sit_url + 'ThirdApiHandler/VipHandler.ashx'
         payload = {'custid':self.custid,'act':'GetVipInfoByTele','random':self.randoms,'token':self.token,'mobile':mobile}
         response = requests.request("POST",url, headers=self.headers, data=payload)
         vipno = _jsonpath(response,'$.data.CardNo')
@@ -93,7 +97,7 @@ class member():
         #如果传入的是手机号，先调用「根据手机号获取会员」接口获取到会员号
         if len(cardnumber) == 11:
             cardnumber = self.get_VipInfoByTele(cardnumber)
-        url = self.prod_url + 'ThirdApiHandler/VipHandler.ashx'
+        url = self.sit_url + 'ThirdApiHandler/VipHandler.ashx'
         payload = {'custid': self.custid, 'act': 'ScoreOperate', 'random': self.randoms, 'token':self.token, 'cardnumber': cardnumber,'score': score, 'type': type}
         response = requests.request("POST", url, headers=self.headers, data=payload)
         print("操作会员为：%s"%cardnumber+";操作积分数：%s"%score+";接口响应结果："+response.text)
