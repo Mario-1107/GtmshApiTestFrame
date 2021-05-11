@@ -9,7 +9,7 @@ from Test.memberApiTest import member
 from Comm.functions import _orderNo
 test = member("823882")
 
-test.scoreOperate("18682241673",'-10','202104101816341634')
+test.scoreOperate('18682241673')
 
 
 

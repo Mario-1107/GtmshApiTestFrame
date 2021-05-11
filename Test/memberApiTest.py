@@ -6,8 +6,11 @@
 @describe：微平台相关接口
 """
 import random,string,redis,requests
+import logging
+from Comm.log import log_init
 from Comm.functions import _randoms,_jsonpath,_orderNo
-#from Conf.config
+log_init()
+logger = logging.getLogger('Mario.member')
 class member():
     #生成指定位数随机数
     randoms = _randoms(32)
@@ -29,8 +32,7 @@ class member():
         :param custid:品牌码
         '''
         self.custid = custid
-        self.token = self.get_redis_token()
-
+        self.token = self.get_redis_token(self.custid)
     def get_token(self):
         '''
         获取token接口
@@ -49,7 +51,7 @@ class member():
             username = 'gsdx'
             password = 'gsdx123'
         url = self.sit_url + 'ThirdApiHandler/VipHandler.ashx'
-        payload = 'custid='+self.custid+'&act=GetToken&random='+self.randoms+'&username='+username+'&password='+password
+        payload = {'custid':self.custid,'act':'GetToken','random':self.randoms,'username':username,'password':password}
         response = requests.request('post',url,headers=self.headers,data=payload)
         token = _jsonpath(response,'$.data')
         try:
@@ -57,20 +59,23 @@ class member():
             self.conn_redis.set('token'+'_'+self.custid,token[0])
             # 把存入redis的token设置失效时间
             self.conn_redis.expire('token'+'_'+self.custid,6600)
+            logger.info("请求参数：" + str(payload) + ";接口响应结果：" + response.text)
         except:
-            print("插入redis失败")
+            logger.error("插入redis失败!"+"请求参数：" + str(payload) + ";接口响应结果：" + response.text)
         return token[0]
 
-    def get_redis_token(self):
+    def get_redis_token(self,custid):
         '''
         获取redis token
         :param custid:品牌码
         :return:返回token
         '''
         try:
-            token = self.conn_redis.get("token"+"_"+self.custid).decode("utf-8")
-        except:
+            token = self.conn_redis.get("token"+"_"+custid).decode("utf-8")
+            logger.info("获取redis token成功，token为：" + token)
+        except AttributeError as att:
             #如果出现错误重新获取token
+            logger.error("获取token失败，错误信息：%s"%att)
             token = self.get_token()
         return token
 
@@ -84,6 +89,7 @@ class member():
         payload = {'custid':self.custid,'act':'GetVipInfoByTele','random':self.randoms,'token':self.token,'mobile':mobile}
         response = requests.request("POST",url, headers=self.headers, data=payload)
         vipno = _jsonpath(response,'$.data.CardNo')
+        logger.info("请求参数："+str(payload)+";接口响应结果："+response.text)
         return vipno[0]
 
     def scoreOperate(self,cardnumber,score='1000',type='101'):
@@ -100,7 +106,7 @@ class member():
         url = self.sit_url + 'ThirdApiHandler/VipHandler.ashx'
         payload = {'custid': self.custid, 'act': 'ScoreOperate', 'random': self.randoms, 'token':self.token, 'cardnumber': cardnumber,'score': score, 'type': type}
         response = requests.request("POST", url, headers=self.headers, data=payload)
-        print("操作会员为：%s"%cardnumber+";操作积分数：%s"%score+";接口响应结果："+response.text)
+        logger.info("请求参数："+str(payload)+";接口响应结果："+response.text)
 
     def vip_FillMoney(self,cardnumber,fillmoney=1000,type=0):
         '''
@@ -115,7 +121,7 @@ class member():
         url = self.sit_url + 'ThirdApiHandler/VipHandler.ashx'
         payload = {'custid': self.custid, 'act': 'VipFillMoney', 'random': self.randoms, 'token': self.token, 'cardnumber': cardnumber,'fillmoney': fillmoney, 'transaction_id': self.randoms, 'out_trade_no': self.randoms, 'type': type}
         response = requests.request("POST", url, headers=self.headers, data=payload)
-        print(response.text)
+        logger.info("请求参数："+str(payload)+";接口响应结果："+response.text)
 
     def get_DynamicCode(self,cardnumber):
         '''
@@ -129,7 +135,7 @@ class member():
         payload = {'custid': self.custid, 'act': 'GetDynamicCode', 'random': self.randoms, 'token': self.token,'cardnumber': cardnumber}
         response = requests.request("POST", url, headers=self.headers, data=payload)
         #vipcode = _jsonpath(response,'$.data')
-        print(response.text)
+        logger.info("请求参数："+str(payload)+";接口响应结果："+response.text)
 
     def get_Bills(self,branchno,tableno,unionid='oxvw21QlHBkA289XhFbHIL1MolJw'):
         '''
@@ -142,7 +148,7 @@ class member():
         url = self.sit_url + 'ThirdApiHandler/VipHandler.ashx'
         payload = {'custid': self.custid, 'act': 'GetBills', 'random': self.randoms, 'token': self.token, 'unionid': unionid,'branchno': branchno, 'tableno': tableno}
         response = requests.request("POST", url, headers=self.headers, data=payload)
-        print(response.text)
+        logger.info("请求参数："+str(payload)+";接口响应结果："+response.text)
 
     def get_BillsByThirdNo(self,branchno,thirdno):
         '''
@@ -154,7 +160,7 @@ class member():
         url = self.sit_url + 'ThirdApiHandler/VipHandler.ashx'
         payload = {'custid':self.custid,'act':'GetBillsByThirdNo','random':self.randoms,'token':self.token,'branchno':branchno,'thirdno':thirdno}
         response = requests.request("POST",url,headers=self.headers,data=payload)
-        print(response.text)
+        logger.info("请求参数："+str(payload)+";接口响应结果："+response.text)
 
     def get_vipinfo(self,unionid='oxvw21QlHBkA289XhFbHIL1MolJw'):
         '''
@@ -165,7 +171,7 @@ class member():
         url = self.sit_url + 'ThirdApiHandler/VipHandler.ashx'
         payload = {'custid':self.custid,'act':'GetVipInfo','random':self.randoms,'token':self.token,'unionid':unionid}
         response = requests.request("POST",url,headers=self.headers,data=payload)
-        print(response.text)
+        logger.info("请求参数："+str(payload)+";接口响应结果："+response.text)
 
     def get_AdvancedVipInfo(self,unionid='oxvw21QlHBkA289XhFbHIL1MolJw',type='0'):
         '''
@@ -177,7 +183,7 @@ class member():
         url = self.sit_url + 'ThirdApiHandler/VipHandler.ashx'
         payload = {'custid':self.custid,'act':'GetAdvancedVipInfo','random':self.randoms,'token':self.token,'unionid':unionid,'type':type}
         reponse = requests.request("POST",url,headers=self.headers,data=payload)
-        print(reponse.text)
+        logger.info("请求参数："+str(payload)+";接口响应结果："+response.text)
 
     def submitOrderMeal(self,branchno='5999'):
         '''
@@ -189,5 +195,4 @@ class member():
         url = self.sit_url + 'ThirdApiHandler/VipHandler.ashx'
         payload = {'custid':self.custid,'act':'SubmitOrderMeal','random':self.randoms,'token':self.token,'branchno':branchno,'meal':'{"tablenumber":"01","totalprice":101.00,"realprice":101.00,"order_id":'+_orderNo()+',"people":2,"as_cvipno":"990000007052","listmealdetail":[{"nPrc":20,"cfood_c":"18100021","bmainfood":0,"unionid":"oxvw21XMFjq5wOR5JiLeMieBIEBA","suitflag":0,"foodtime":"1","ndisrate":0,"ordernum":"1010000059344-2-1","sMade":"免薄荷叶##191","cfood_n":"半价柠檬冰桔茶","nqty":1,"sunit":"杯","order_id":'+_orderNo()+'},{"nPrc":20,"cfood_c":"10120008","bmainfood":0,"unionid":"oxvw21XMFjq5wOR5JiLeMieBIEBA","suitflag":0,"foodtime":"2","cfood_n":"金针菇","ndisrate":0,"ordernum":"1010000059344-2-2","nqty":1,"sunit":"份","order_id":'+_orderNo()+'},{"nPrc":20,"cfood_c":"10120035","bmainfood":0,"unionid":"oxvw21XMFjq5wOR5JiLeMieBIEBA","suitflag":0,"foodtime":"3","cfood_n":"血旺","ndisrate":0,"ordernum":"1010000059344-2-3","nqty":1,"sunit":"份","order_id":'+_orderNo()+'},{"nPrc":20,"cfood_c":"10110003","bmainfood":0,"unionid":"oxvw21XMFjq5wOR5JiLeMieBIEBA","suitflag":0,"foodtime":"4","ndisrate":0,"ordernum":"1010000059344-2-4-1","sMade":"香辣味+1.00,不加葱加辣##001,059","cfood_n":"大鮰鱼","nqty":1,"order_id":'+_orderNo()+'},{"nPrc":20,"cfood_c":"10120032","bmainfood":0,"unionid":"oxvw21XMFjq5wOR5JiLeMieBIEBA","suitflag":0,"foodtime":"4","cfood_n":"泡饼(辅菜)","ndisrate":0,"ordernum":"1010000059344-2-4-2","nqty":1,"order_id":'+_orderNo()+'}]}'}
         reponse = requests.request('POST',url,headers=self.headers,data=payload)
-        print(payload)
-        print(reponse.text)
+        logger.info("请求参数："+str(payload)+";接口响应结果："+response.text)
