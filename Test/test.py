@@ -9,7 +9,7 @@ from Test.memberApiTest import member
 from Comm.functions import _orderNo
 test = member("823882")
 
-test.scoreOperate('18682241673')
+test.get_VipIntegralFlowList("18682241673",begindate='2021-05-02')
 
 
 

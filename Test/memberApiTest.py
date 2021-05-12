@@ -5,27 +5,30 @@
 @time:2021/04/30
 @describe：微平台相关接口
 """
-import random,string,redis,requests
+import random,string,redis,requests,time
 import logging
 from Comm.log import log_init
 from Comm.functions import _randoms,_jsonpath,_orderNo
+from Conf.config import sys_cfg
 log_init()
 logger = logging.getLogger('Mario.member')
+
 class member():
     #生成指定位数随机数
     randoms = _randoms(32)
     #连接本地redis
     conn_redis = redis.Redis(host='localhost',port='6379',db=0)
+    #获取当前日期：年月日
+    now_time = time.strftime("%Y-%m-%d", time.localtime())
     #设置URL头部（测试环境）
-    sit_url = 'http://km-test.gtmsh.com/WX_Food_Tanyu/'
+    sit_url = sys_cfg['sit_url']
     #设置URL头部（生产环境）
-    prod_url = 'http://wxapi.gtmsh.com/'
+    prod_url = sys_cfg['prod_url']
     #请求头部信息
     headers = {'Content-Type': 'application/x-www-form-urlencoded'}
     #定义基本属性
     custid = ''
     token = ''
-
     def __init__(self,custid):
         '''
         构造函数，赋予初始值
@@ -59,7 +62,7 @@ class member():
             self.conn_redis.set('token'+'_'+self.custid,token[0])
             # 把存入redis的token设置失效时间
             self.conn_redis.expire('token'+'_'+self.custid,6600)
-            logger.info("请求参数：" + str(payload) + ";接口响应结果：" + response.text)
+            logger.info("token插入redis成功～"+"请求参数：" + str(payload) + ";接口响应结果：" + response.text)
         except:
             logger.error("插入redis失败!"+"请求参数：" + str(payload) + ";接口响应结果：" + response.text)
         return token[0]
@@ -77,6 +80,8 @@ class member():
             #如果出现错误重新获取token
             logger.error("获取token失败，错误信息：%s"%att)
             token = self.get_token()
+        except redis.exceptions.ConnectionError as re:
+            logger.error('连接redis失败，错误：%s' % re)
         return token
 
     def get_VipInfoByTele(self,mobile):
@@ -194,5 +199,22 @@ class member():
         '''
         url = self.sit_url + 'ThirdApiHandler/VipHandler.ashx'
         payload = {'custid':self.custid,'act':'SubmitOrderMeal','random':self.randoms,'token':self.token,'branchno':branchno,'meal':'{"tablenumber":"01","totalprice":101.00,"realprice":101.00,"order_id":'+_orderNo()+',"people":2,"as_cvipno":"990000007052","listmealdetail":[{"nPrc":20,"cfood_c":"18100021","bmainfood":0,"unionid":"oxvw21XMFjq5wOR5JiLeMieBIEBA","suitflag":0,"foodtime":"1","ndisrate":0,"ordernum":"1010000059344-2-1","sMade":"免薄荷叶##191","cfood_n":"半价柠檬冰桔茶","nqty":1,"sunit":"杯","order_id":'+_orderNo()+'},{"nPrc":20,"cfood_c":"10120008","bmainfood":0,"unionid":"oxvw21XMFjq5wOR5JiLeMieBIEBA","suitflag":0,"foodtime":"2","cfood_n":"金针菇","ndisrate":0,"ordernum":"1010000059344-2-2","nqty":1,"sunit":"份","order_id":'+_orderNo()+'},{"nPrc":20,"cfood_c":"10120035","bmainfood":0,"unionid":"oxvw21XMFjq5wOR5JiLeMieBIEBA","suitflag":0,"foodtime":"3","cfood_n":"血旺","ndisrate":0,"ordernum":"1010000059344-2-3","nqty":1,"sunit":"份","order_id":'+_orderNo()+'},{"nPrc":20,"cfood_c":"10110003","bmainfood":0,"unionid":"oxvw21XMFjq5wOR5JiLeMieBIEBA","suitflag":0,"foodtime":"4","ndisrate":0,"ordernum":"1010000059344-2-4-1","sMade":"香辣味+1.00,不加葱加辣##001,059","cfood_n":"大鮰鱼","nqty":1,"order_id":'+_orderNo()+'},{"nPrc":20,"cfood_c":"10120032","bmainfood":0,"unionid":"oxvw21XMFjq5wOR5JiLeMieBIEBA","suitflag":0,"foodtime":"4","cfood_n":"泡饼(辅菜)","ndisrate":0,"ordernum":"1010000059344-2-4-2","nqty":1,"order_id":'+_orderNo()+'}]}'}
-        reponse = requests.request('POST',url,headers=self.headers,data=payload)
+        response = requests.request('POST',url,headers=self.headers,data=payload)
         logger.info("请求参数："+str(payload)+";接口响应结果："+response.text)
+
+    def get_VipIntegralFlowList(self,cardnumber,begindate=now_time,enddate=now_time,pageindex=1,pagesize=100):
+        '''
+        获取会员积分明细接口
+        :param cardnumber:会员卡号或手机号
+        :param pageindex:页码
+        :param pagesize:每次获取数据个数
+        :param begindate:开始时间，默认为当前日期
+        :param enddate:结束时间，默认为当前日期
+        :return:接口响应内容
+        '''
+        if len(cardnumber) == 11:
+            cardnumber = self.get_VipInfoByTele(cardnumber)
+        url = self.sit_url + 'ThirdApiHandler/VipHandler.ashx'
+        payload = {'custid':self.custid,'act':'GetVipIntegralFlowList','random':self.randoms,'token':self.token,'cardnumber':cardnumber,'pageindex':pageindex,'pagesize':pagesize,'begindate':begindate,'enddate':enddate}
+        response = requests.request('POST',url,headers=self.headers,data=payload)
+        logger.info("请求参数：" + str(payload) + ";接口响应结果：" + response.text)

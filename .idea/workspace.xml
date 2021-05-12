@@ -3,6 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="c7caa3fc-ab5b-4239-8851-ea45133d4c75" name="Default Changelist" comment="新增日志处理">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Conf/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Conf/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Conf/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/Conf/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/memberApiTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/memberApiTest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/log.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,9 +35,11 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Comm/PushMsg.py" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Test/memberApiTest.py" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Test/tapdApiTest.py" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Comm/email.py" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Comm/data.py" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Comm/log.py" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/log/log.txt" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Conf/config.ini" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Conf/config.py" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Test/test.py" root0="SKIP_HIGHLIGHTING" />
@@ -57,7 +64,7 @@
       <recent name="$PROJECT_DIR$/Test" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.data">
+  <component name="RunManager" selected="Python.tapdApiTest">
     <configuration name="config" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="GtmshApiTestFrame" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -142,7 +149,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="memberApiTest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="tapdApiTest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="GtmshApiTestFrame" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -154,7 +161,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test/memberApiTest.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test/tapdApiTest.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -186,11 +193,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.data" />
+        <item itemvalue="Python.tapdApiTest" />
         <item itemvalue="Python.test" />
+        <item itemvalue="Python.data" />
         <item itemvalue="Python.log" />
         <item itemvalue="Python.config" />
-        <item itemvalue="Python.memberApiTest" />
       </list>
     </recent_temporary>
   </component>
@@ -280,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620726610814</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="新增日志处理">
+      <created>1620728776102</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1620728776102</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

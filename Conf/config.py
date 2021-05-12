@@ -43,3 +43,4 @@ def _get_all_conf():
 config = _get_all_conf()
 sys_cfg = config['sys']
 log_cfg = config['log']
+tapd_cfg = config['tapd']
