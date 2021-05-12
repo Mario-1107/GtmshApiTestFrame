@@ -44,3 +44,5 @@ config = _get_all_conf()
 sys_cfg = config['sys']
 log_cfg = config['log']
 tapd_cfg = config['tapd']
+smtp_cfg = config['smtp']
+email_cfg = config['email']

@@ -1,7 +1,7 @@
 # -*- coding+: utf-8 -*-
 """
 @author:Kirito
-@file:log.py
+@file:Log.py
 @time:2021/04/19
 @describe：日志处理
 """
