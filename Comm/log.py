@@ -11,7 +11,6 @@ from Conf.config import log_cfg
 from logging.handlers import TimedRotatingFileHandler
 #基础目录
 _baseHome = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
-
 #读取log配置
 #日志等级：log_level取过来是个字符串，没法直接用，通过eval执行后，就变成了logging定义的对象
 _log_level = eval(log_cfg['log_level'])

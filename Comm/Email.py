@@ -16,7 +16,10 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.application import MIMEApplication
 log_init()
 logger = logging.getLogger('Mario.email')
+
+#文件大小限制20M
 file_size = 20
+#文件大小限制10个
 file_count = 10
 class Email:
 
@@ -111,6 +114,10 @@ class Email:
             conn.close()
             logger.info('关闭邮箱连接～')
         return result
+
+#https://www.baidu.com/s?ie=UTF-8&wd=BeautifulReport
+#自动化测试报告
+#BeautifulReport
 
 # mail = Email('测试组第三周周报','第一次发送')
 # send = mail.send_mail()

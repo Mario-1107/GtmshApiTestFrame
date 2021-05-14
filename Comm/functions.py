@@ -6,7 +6,6 @@
 @describe：公用方法
 """
 import random,string,jsonpath,json,time
-
 def _randoms(length):
     '''
     生成指定位数随机数
