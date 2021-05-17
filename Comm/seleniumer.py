@@ -26,7 +26,7 @@ class selenium():
         self.browser = webdriver.Chrome(r'/Users/air/Desktop/Test/chromedriver')
         self.browser.maximize_window()
 
-    def
+
 
 
     def get_image_code(self):
@@ -101,4 +101,54 @@ class selenium():
             #抛出异常
             raise
 
-    def
+    def get_element(self,locator,doc=''):
+        '''
+        查找元素
+        :param locator:定位器，元素定位（元祖类型：元素定位类型，元素定位方式）
+        :param doc:模块名——页面名称——操作名称
+        :return:
+        '''
+        logger.info(f"{doc}:查找元素：{locator}")
+        try:
+            return self.browser.find_element(*locator)
+        except:
+            logger.exception("查找元素失败！")
+            self.browser.save_screenshot(self._image_path)
+            raise
+
+    def click_element(self,locator,doc=''):
+        '''
+        点击元素操作
+        :param locator:定位器，元素定位（元祖类型：元素定位类型，元素定位方式）
+        :param doc:模块名——页面名称——操作名称
+        :return:
+        '''
+        #找到对应元素
+        ele = self.get_element(locator,doc)
+        #元素点击操作
+        logger.info(f"{doc},点击元素：{locator}")
+        try:
+            ele.click()
+        except:
+            logger.exception("元素点击操作失败！")
+            self.browser.save_screenshot(self._image_path)
+            raise
+
+    def input_text(self,locator,text,doc=''):
+        '''
+        输入操作
+        :param locator: 定位器，元素定位（元祖类型：元素定位类型，元素定位方式）
+        :param text: 输入内容
+        :param doc: 模块名——页面名称——操作名称
+        :return:
+        '''
+        #找到对应元素
+        ele = self.get_element(locator,doc)
+        #输入对应内容
+        logger.info(f"{doc},元素：{locator}输入内容:{text}")
+        try:
+            ele.send_keys(text)
+        except:
+            logger.exception("内容输入操作失败！")
+            self.browser.save_screenshot(self._image_path)
+            raise
