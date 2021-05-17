@@ -3,7 +3,7 @@
 @author:Kirito
 @file:seleniumTest.py
 @time:2021/05/14
-@describe：
+@describe：selenium功能测试
 """
 from selenium import webdriver
 import time

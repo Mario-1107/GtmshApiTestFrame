@@ -3,7 +3,7 @@
 @author:Kirito
 @file:Screenshot.py
 @time:2021/05/14
-@describe：截图相关功能
+@describe：截图相关功能,暂时弃用
 """
 import time,os
 from PIL import ImageGrab,Image
@@ -43,7 +43,7 @@ def screen(name):
     #判断文件夹是否存在，不存在就新建一个文件夹
     if not os.path.exists(_screen_path):
         os.makedirs(_screen_path)
-    image_name = os.path.join(_screen_path,name)
+    image_name = os.path.join( ,name)
     #文件名后面加一个时间戳，避免重名
     png.save('{0}_{1}.png'.format(image_name,str(round(t * 1000))))
 
