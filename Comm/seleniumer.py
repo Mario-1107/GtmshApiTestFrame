@@ -13,6 +13,7 @@ import os,time,logging,datetime
 from PIL import ImageGrab,Image
 log_init()
 logger = logging.getLogger('Mario.selenium')
+
 class selenium():
     #截图文件保存路径:
     # 基础目录
@@ -21,7 +22,7 @@ class selenium():
     _today = time.strftime("%Y%m%d")
     _screen_path = os.path.join(_baseHome, 'Log', 'Screen', _today)
     _image_path = '{0}_{1}.png'.format(_screen_path,str(round(time.time() * 1000)))
-
+    test_url = ('xpath', '//*[@id="jingtaimima"]/a')
     def __init__(self):
         self.browser = webdriver.Chrome(r'/Users/air/Desktop/Test/chromedriver')
         self.browser.maximize_window()
@@ -49,24 +50,25 @@ class selenium():
         img.save(self._image_path)
         return self._image_path
 
-    def open_url(self,url):
+    def open_url(self,url,doc=''):
         '''
         打开对应网站
         :param url:需要访问的地址
         :return:none
         '''
-        logger.info(f"正在打开网址:{url}")
+        logger.info(f"{doc}:正在打开网址:{url}")
         self.browser.get(url)
 
-    def quit_browser(self):
+    def quit_browser(self,doc=''):
         '''
         关闭浏览器
         :return:none
         '''
-        logger.info("正在关闭浏览器～")
+        logger.info(f"{doc}:正在关闭浏览器～")
         self.browser.quit()
 
-    def wait_element_visible(self,locator,times=30,poll_frequency=0.5,doc=''):
+
+    def wait_element_visible(self,locator,doc='',times=30,poll_frequency=0.5):
         '''
         等待元素操作
         :param locator:定位器，元素定位（元祖类型：元素定位类型，元素定位方式）
@@ -126,7 +128,7 @@ class selenium():
         #找到对应元素
         ele = self.get_element(locator,doc)
         #元素点击操作
-        logger.info(f"{doc},点击元素：{locator}")
+        logger.info(f"{doc}:点击元素：{locator}")
         try:
             ele.click()
         except:
@@ -145,10 +147,22 @@ class selenium():
         #找到对应元素
         ele = self.get_element(locator,doc)
         #输入对应内容
-        logger.info(f"{doc},元素：{locator}输入内容:{text}")
+        logger.info(f"{doc}:元素：{locator}输入内容:{text}")
         try:
             ele.send_keys(text)
         except:
             logger.exception("内容输入操作失败！")
             self.browser.save_screenshot(self._image_path)
             raise
+
+    def compulsory_wait(self,times=3,doc=''):
+        '''
+        页面强制等待
+        :param time:等待时间。默认3秒
+        :return:none
+        '''
+        logger.info(f"{doc}:强制等待中，共计{times}秒")
+        time.sleep(times)
+
+
+
