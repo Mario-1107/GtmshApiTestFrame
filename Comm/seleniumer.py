@@ -22,7 +22,6 @@ class selenium():
     _today = time.strftime("%Y%m%d")
     _screen_path = os.path.join(_baseHome, 'Log', 'Screen', _today)
     _image_path = '{0}_{1}.png'.format(_screen_path,str(round(time.time() * 1000)))
-    test_url = ('xpath', '//*[@id="jingtaimima"]/a')
     def __init__(self):
         self.browser = webdriver.Chrome(r'/Users/air/Desktop/Test/chromedriver')
         self.browser.maximize_window()
