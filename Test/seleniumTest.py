@@ -5,20 +5,22 @@
 @time:2021/05/14
 @describe：selenium功能测试
 """
+import unittest
 from Comm.seleniumer import selenium
 from Conf.config import sys_cfg
 import time
-doc = 'selenium功能测试'
-browser = selenium()
-browser.open_url(sys_cfg['oa_url'],doc)
-browser.wait_element_visible(('xpath','//*[@id="jingtaimima"]/a'),doc)
-browser.click_element(browser.test_url,doc)
-browser.wait_element_visible(('xpath','//*[@id="validateCode"]'),doc)
-browser.input_text(('id','username'),'V_wuyanwen',doc)
-browser.input_text(('id','pwd'),'GT123',doc)
-browser.click_element(('id','login'),doc)
-browser.compulsory_wait(doc=doc)
-browser.quit_browser(doc)
+# doc = 'selenium功能测试'
+# browser = selenium()
+# browser.open_url(sys_cfg['oa_url'],doc)
+# browser.wait_element_visible(('xpath','//*[@id="jingtaimima"]/a'),doc)
+# browser.click_element(('xpath','//*[@id="jingtaimima"]/a/img'),doc)
+# browser.wait_element_visible(('xpath','//*[@id="validateCode"]'),doc)
+# browser.input_text(('id','username'),'V_wuyanwen',doc)
+# browser.input_text(('id','pwd'),'GT123',doc)
+# browser.click_element(('id','login'),doc)
+# browser.compulsory_wait(doc=doc)
+# browser.quit_browser(doc)
+
 
 
 
