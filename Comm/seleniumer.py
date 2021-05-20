@@ -163,5 +163,19 @@ class selenium():
         logger.info(f"{doc}:强制等待中，共计{times}秒")
         time.sleep(times)
 
-
+    def get_element_txt(self,locator,doc=''):
+        '''
+        获取元素文本内容
+        :param locator:定位器，元素定位（元祖类型：元素定位类型，元素定位方式）
+        :param doc:模块名——页面名称——操作名称
+        :return:元素文本内容
+        '''
+        ele = self.get_element(locator,doc)
+        logger.info(f"{doc}:进行获取{locator}元素文本内容操作")
+        try:
+            return ele.text
+        except:
+            logger.exception("获取元素文本内容操作失败～")
+            self.browser.save_screenshot(self._image_path)
+            raise
 

@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c7caa3fc-ab5b-4239-8851-ea45133d4c75" name="Default Changelist" comment="新增selenium模块封装">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Log/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Log/log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/seleniumTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/seleniumTest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comm/seleniumer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Comm/seleniumer.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -357,7 +356,21 @@
       <option name="project" value="LOCAL" />
       <updated>1621324279271</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="新增selenium模块封装">
+      <created>1621390414603</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1621390414603</updated>
+    </task>
+    <task id="LOCAL-00021" summary="新增selenium模块封装">
+      <created>1621390424981</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1621390424981</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
