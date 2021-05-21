@@ -1,0 +1,138 @@
+2021-05-17 17:53:56,465 Mario.selenium seleniumer.py [line:58] INFO  正在打开网址:https://bk-test.gtmsh.com
+2021-05-17 17:54:01,590 Mario.selenium seleniumer.py [line:66] INFO  正在关闭浏览器～
+2021-05-17 18:01:10,784 Mario.selenium seleniumer.py [line:58] INFO  正在打开网址:https://bk-test.gtmsh.com
+2021-05-17 18:02:18,447 Mario.selenium seleniumer.py [line:58] INFO  正在打开网址:https://bk-test.gtmsh.com
+2021-05-17 18:04:55,979 Mario.selenium seleniumer.py [line:58] INFO  正在打开网址:https://bk-test.gtmsh.com
+2021-05-17 18:08:48,633 Mario.selenium seleniumer.py [line:58] INFO  正在打开网址:https://bk-test.gtmsh.com
+2021-05-17 18:12:52,741 Mario.selenium seleniumer.py [line:58] INFO  正在打开网址:https://bk-test.gtmsh.com
+2021-05-17 18:14:20,845 Mario.selenium seleniumer.py [line:58] INFO  正在打开网址:https://bk-test.gtmsh.com
+2021-05-17 18:14:22,564 Mario.selenium seleniumer.py [line:78] INFO  等待元素('By.XPATH', '//*[@id="validateCode"]')可见~
+2021-05-17 18:14:22,569 Mario.selenium seleniumer.py [line:98] ERROR  等待可见元素失败～
+Traceback (most recent call last):
+  File "/Users/air/PycharmProjects/GtmshApiTestFrame/Comm/seleniumer.py", line 89, in wait_element_visible
+    WebDriverWait(self.browser,times,poll_frequency).until(expected_conditions.visibility_of_element_located(locator))
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/support/wait.py", line 71, in until
+    value = method(self._driver)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/support/expected_conditions.py", line 128, in __call__
+    return _element_if_visible(_find_element(driver, self.locator))
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/support/expected_conditions.py", line 415, in _find_element
+    raise e
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/support/expected_conditions.py", line 411, in _find_element
+    return driver.find_element(*by)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidArgumentException: Message: invalid argument: invalid locator
+  (Session info: chrome=90.0.4430.212)
+
+2021-05-17 18:19:41,227 Mario.selenium seleniumer.py [line:58] INFO  正在打开网址:https://bk-test.gtmsh.com
+2021-05-17 18:19:42,229 Mario.selenium seleniumer.py [line:112] INFO  selenium功能测试:查找元素：('By.XPATH', '//*[@id="jingtaimima"]/a')
+2021-05-17 18:19:42,238 Mario.selenium seleniumer.py [line:116] ERROR  查找元素失败！
+Traceback (most recent call last):
+  File "/Users/air/PycharmProjects/GtmshApiTestFrame/Comm/seleniumer.py", line 114, in get_element
+    return self.browser.find_element(*locator)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidArgumentException: Message: invalid argument: invalid locator
+  (Session info: chrome=90.0.4430.212)
+
+2021-05-17 18:29:46,541 Mario.selenium seleniumer.py [line:59] INFO  正在打开网址:https://bk-test.gtmsh.com
+2021-05-17 18:29:47,510 Mario.selenium seleniumer.py [line:113] INFO  selenium功能测试:查找元素：('by_xpath', '//*[@id="jingtaimima"]/a')
+2021-05-17 18:29:47,515 Mario.selenium seleniumer.py [line:117] ERROR  查找元素失败！
+Traceback (most recent call last):
+  File "/Users/air/PycharmProjects/GtmshApiTestFrame/Comm/seleniumer.py", line 115, in get_element
+    return self.browser.find_element(*locator)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidArgumentException: Message: invalid argument: invalid locator
+  (Session info: chrome=90.0.4430.212)
+
+2021-05-18 09:44:30,867 Mario.selenium seleniumer.py [line:59] INFO  正在打开网址:https://bk-test.gtmsh.com
+2021-05-18 09:45:13,193 Mario.selenium seleniumer.py [line:59] INFO  正在打开网址:https://bk-test.gtmsh.com
+2021-05-18 09:45:19,058 Mario.selenium seleniumer.py [line:113] INFO  selenium功能测试:查找元素：('xpath', '//*[@id="jingtaimima"]/a')
+2021-05-18 09:45:19,074 Mario.selenium seleniumer.py [line:131] INFO  selenium功能测试,点击元素：('xpath', '//*[@id="jingtaimima"]/a')
+2021-05-18 09:45:22,118 Mario.selenium seleniumer.py [line:67] INFO  正在关闭浏览器～
+2021-05-18 09:47:32,412 Mario.selenium seleniumer.py [line:59] INFO  正在打开网址:https://bk-test.gtmsh.com
+2021-05-18 09:47:33,589 Mario.selenium seleniumer.py [line:80] INFO  等待元素('xpath', '//*[@id="validateCode"]')可见~
+2021-05-18 09:47:55,527 Mario.selenium seleniumer.py [line:100] ERROR  等待可见元素失败～
+Traceback (most recent call last):
+  File "/Users/air/PycharmProjects/GtmshApiTestFrame/Comm/seleniumer.py", line 91, in wait_element_visible
+    WebDriverWait(self.browser,times,poll_frequency).until(expected_conditions.visibility_of_element_located(locator))
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/support/wait.py", line 77, in until
+    time.sleep(self._poll)
+KeyboardInterrupt
+2021-05-18 09:48:21,679 Mario.selenium seleniumer.py [line:59] INFO  正在打开网址:https://bk-test.gtmsh.com
+2021-05-18 09:48:22,633 Mario.selenium seleniumer.py [line:80] INFO  等待元素('xpath', '//*[@id="validateCode"]')可见~
+2021-05-18 09:48:52,782 Mario.selenium seleniumer.py [line:100] ERROR  等待可见元素失败～
+Traceback (most recent call last):
+  File "/Users/air/PycharmProjects/GtmshApiTestFrame/Comm/seleniumer.py", line 91, in wait_element_visible
+    WebDriverWait(self.browser,times,poll_frequency).until(expected_conditions.visibility_of_element_located(locator))
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/support/wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+2021-05-18 09:49:52,713 Mario.selenium seleniumer.py [line:59] INFO  正在打开网址:https://bk-test.gtmsh.com
+2021-05-18 09:49:53,629 Mario.selenium seleniumer.py [line:80] INFO  等待元素('xpath', '//*[@id="jingtaimima"]/a')可见~
+2021-05-18 09:49:55,410 Mario.selenium seleniumer.py [line:97] INFO  selenium功能测试:元素('xpath', '//*[@id="jingtaimima"]/a')可见，等待结束。等待开始时间：2021-05-18 09:49:53.629482,等待结束时间：2021-05-18 09:49:55.410179，等待时长为：86398
+2021-05-18 09:49:55,411 Mario.selenium seleniumer.py [line:113] INFO  selenium功能测试:查找元素：('xpath', '//*[@id="jingtaimima"]/a')
+2021-05-18 09:49:55,418 Mario.selenium seleniumer.py [line:131] INFO  selenium功能测试,点击元素：('xpath', '//*[@id="jingtaimima"]/a')
+2021-05-18 09:49:58,611 Mario.selenium seleniumer.py [line:67] INFO  正在关闭浏览器～
+2021-05-18 15:14:16,312 Mario.selenium seleniumer.py [line:59] INFO  selenium功能测试:正在打开网址:https://bk-test.gtmsh.com
+2021-05-18 15:14:17,309 Mario.selenium seleniumer.py [line:80] INFO  等待元素('xpath', '//*[@id="jingtaimima"]/a')可见~
+2021-05-18 15:14:19,217 Mario.selenium seleniumer.py [line:97] INFO  selenium功能测试:元素('xpath', '//*[@id="jingtaimima"]/a')可见，等待结束。等待开始时间：2021-05-18 15:14:17.309853,等待结束时间：2021-05-18 15:14:19.216954，等待时长为：86398
+2021-05-18 15:14:19,217 Mario.selenium seleniumer.py [line:113] INFO  selenium功能测试:查找元素：('xpath', '//*[@id="jingtaimima"]/a')
+2021-05-18 15:14:19,224 Mario.selenium seleniumer.py [line:131] INFO  selenium功能测试:点击元素：('xpath', '//*[@id="jingtaimima"]/a')
+2021-05-18 15:14:20,240 Mario.selenium seleniumer.py [line:80] INFO  等待元素('xpath', '//*[@id="validateCode"]')可见~
+2021-05-18 15:14:20,262 Mario.selenium seleniumer.py [line:97] INFO  selenium功能测试:元素('xpath', '//*[@id="validateCode"]')可见，等待结束。等待开始时间：2021-05-18 15:14:20.240884,等待结束时间：2021-05-18 15:14:20.262230，等待时长为：86399
+2021-05-18 15:14:20,262 Mario.selenium seleniumer.py [line:113] INFO  selenium功能测试:查找元素：('id', 'username')
+2021-05-18 15:14:20,271 Mario.selenium seleniumer.py [line:150] INFO  selenium功能测试:元素：('id', 'username')输入内容:V_wuyanwen
+2021-05-18 15:14:20,398 Mario.selenium seleniumer.py [line:113] INFO  selenium功能测试:查找元素：('id', 'pwd')
+2021-05-18 15:14:20,409 Mario.selenium seleniumer.py [line:150] INFO  selenium功能测试:元素：('id', 'pwd')输入内容:GT123
+2021-05-18 15:14:20,479 Mario.selenium seleniumer.py [line:113] INFO  selenium功能测试:查找元素：('id', 'login')
+2021-05-18 15:14:20,490 Mario.selenium seleniumer.py [line:131] INFO  selenium功能测试:点击元素：('id', 'login')
+2021-05-18 15:14:20,586 Mario.selenium seleniumer.py [line:164] INFO  selenium功能测试:强制等待中，共计3秒
+2021-05-18 15:14:23,586 Mario.selenium seleniumer.py [line:67] INFO  selenium功能测试:正在关闭浏览器～
+2021-05-18 17:35:46,051 Mario.selenium seleniumer.py [line:58] INFO  selenium功能测试:正在打开网址:https://bk-test.gtmsh.com
+2021-05-18 17:35:47,840 Mario.selenium seleniumer.py [line:79] INFO  等待元素('xpath', '//*[@id="jingtaimima"]/a')可见~
+2021-05-18 17:35:49,631 Mario.selenium seleniumer.py [line:96] INFO  selenium功能测试:元素('xpath', '//*[@id="jingtaimima"]/a')可见，等待结束。等待开始时间：2021-05-18 17:35:47.840206,等待结束时间：2021-05-18 17:35:49.630821，等待时长为：86398
+2021-05-18 17:39:21,560 Mario.selenium seleniumer.py [line:58] INFO  selenium功能测试:正在打开网址:https://bk-test.gtmsh.com
+2021-05-18 17:39:23,763 Mario.selenium seleniumer.py [line:79] INFO  等待元素('xpath', '//*[@id="jingtaimima"]/a')可见~
+2021-05-18 17:39:26,515 Mario.selenium seleniumer.py [line:96] INFO  selenium功能测试:元素('xpath', '//*[@id="jingtaimima"]/a')可见，等待结束。等待开始时间：2021-05-18 17:39:23.763239,等待结束时间：2021-05-18 17:39:26.514794，等待时长为：86397
+2021-05-18 17:39:26,515 Mario.selenium seleniumer.py [line:112] INFO  selenium功能测试:查找元素：('xpath', '//*[@id="jingtaimima"]/a/img')
+2021-05-18 17:39:26,544 Mario.selenium seleniumer.py [line:130] INFO  selenium功能测试:点击元素：('xpath', '//*[@id="jingtaimima"]/a/img')
+2021-05-18 17:39:26,896 Mario.selenium seleniumer.py [line:79] INFO  等待元素('xpath', '//*[@id="validateCode"]')可见~
+2021-05-18 17:39:26,918 Mario.selenium seleniumer.py [line:96] INFO  selenium功能测试:元素('xpath', '//*[@id="validateCode"]')可见，等待结束。等待开始时间：2021-05-18 17:39:26.897000,等待结束时间：2021-05-18 17:39:26.918215，等待时长为：86399
+2021-05-18 17:39:26,918 Mario.selenium seleniumer.py [line:112] INFO  selenium功能测试:查找元素：('id', 'username')
+2021-05-18 17:39:26,927 Mario.selenium seleniumer.py [line:149] INFO  selenium功能测试:元素：('id', 'username')输入内容:V_wuyanwen
+2021-05-18 17:39:27,034 Mario.selenium seleniumer.py [line:112] INFO  selenium功能测试:查找元素：('id', 'pwd')
+2021-05-18 17:39:27,045 Mario.selenium seleniumer.py [line:149] INFO  selenium功能测试:元素：('id', 'pwd')输入内容:GT123
+2021-05-18 17:39:27,098 Mario.selenium seleniumer.py [line:112] INFO  selenium功能测试:查找元素：('id', 'login')
+2021-05-18 17:39:27,111 Mario.selenium seleniumer.py [line:130] INFO  selenium功能测试:点击元素：('id', 'login')
+2021-05-18 17:39:27,205 Mario.selenium seleniumer.py [line:163] INFO  selenium功能测试:强制等待中，共计3秒
+2021-05-18 17:39:30,208 Mario.selenium seleniumer.py [line:66] INFO  selenium功能测试:正在关闭浏览器～
+2021-05-18 17:45:12,203 Mario.selenium seleniumer.py [line:58] INFO  selenium功能测试:正在打开网址:https://bk-test.gtmsh.com
+2021-05-18 17:45:13,129 Mario.selenium seleniumer.py [line:79] INFO  等待元素('xpath', '//*[@id="jingtaimima"]/a')可见~
+2021-05-18 17:45:14,922 Mario.selenium seleniumer.py [line:96] INFO  selenium功能测试:元素('xpath', '//*[@id="jingtaimima"]/a')可见，等待结束。等待开始时间：2021-05-18 17:45:13.129814,等待结束时间：2021-05-18 17:45:14.922036，等待时长为：86398
+2021-05-18 17:45:14,922 Mario.selenium seleniumer.py [line:112] INFO  selenium功能测试:查找元素：('xpath', '//*[@id="jingtaimima"]/a/img')
+2021-05-18 17:45:14,937 Mario.selenium seleniumer.py [line:130] INFO  selenium功能测试:点击元素：('xpath', '//*[@id="jingtaimima"]/a/img')
+2021-05-18 17:45:15,192 Mario.selenium seleniumer.py [line:79] INFO  等待元素('xpath', '//*[@id="validateCode"]')可见~
+2021-05-18 17:45:15,219 Mario.selenium seleniumer.py [line:96] INFO  selenium功能测试:元素('xpath', '//*[@id="validateCode"]')可见，等待结束。等待开始时间：2021-05-18 17:45:15.192460,等待结束时间：2021-05-18 17:45:15.219932，等待时长为：86399
+2021-05-18 17:45:15,220 Mario.selenium seleniumer.py [line:112] INFO  selenium功能测试:查找元素：('id', 'username')
+2021-05-18 17:45:15,231 Mario.selenium seleniumer.py [line:149] INFO  selenium功能测试:元素：('id', 'username')输入内容:V_wuyanwen
+2021-05-18 17:45:15,369 Mario.selenium seleniumer.py [line:112] INFO  selenium功能测试:查找元素：('id', 'pwd')
+2021-05-18 17:45:15,379 Mario.selenium seleniumer.py [line:149] INFO  selenium功能测试:元素：('id', 'pwd')输入内容:GT123
+2021-05-18 17:45:15,436 Mario.selenium seleniumer.py [line:112] INFO  selenium功能测试:查找元素：('id', 'login')
+2021-05-18 17:45:15,453 Mario.selenium seleniumer.py [line:130] INFO  selenium功能测试:点击元素：('id', 'login')
+2021-05-18 17:45:15,533 Mario.selenium seleniumer.py [line:163] INFO  selenium功能测试:强制等待中，共计3秒
+2021-05-18 17:45:18,534 Mario.selenium seleniumer.py [line:66] INFO  selenium功能测试:正在关闭浏览器～

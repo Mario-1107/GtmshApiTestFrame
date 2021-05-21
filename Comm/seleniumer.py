@@ -22,10 +22,34 @@ class selenium():
     _today = time.strftime("%Y%m%d")
     _screen_path = os.path.join(_baseHome, 'Log', 'Screen', _today)
     _image_path = '{0}_{1}.png'.format(_screen_path,str(round(time.time() * 1000)))
-    def __init__(self):
-        self.browser = webdriver.Chrome(r'/Users/air/Desktop/Test/chromedriver')
-        self.browser.maximize_window()
 
+    def __init__(self):
+        '''
+        构造函数
+        '''
+        self.browser = webdriver.Chrome(r'/Users/air/Desktop/Test/chromedriver',options=self.options())
+
+    def options(self):
+        '''
+        ChromeOptions配置
+        :return: options
+        '''
+        # ChromeOptions配置
+        options = webdriver.ChromeOptions()
+        # 最大化窗口
+        options.add_argument('start-fullscreen')
+        # 去掉浏览器自动化警告条
+        options.add_experimental_option('excludeSwitches', ['enable-automation'])
+        #加载浏览器缓存：/Users/air/Library/Application Support/Google/Chrome/
+        options.add_argument(r'--user-data-dir=/Users/air/Library/Application Support/Google/Chrome/')
+        #无界面模式
+        #options.add_argument('headless')
+        #隐身模式
+        #options.add_argument('incognito')
+        #禁止图片加载
+        #options.add_argument('blink-settings=imagesEnabled=false')
+
+        return options
 
 
 
