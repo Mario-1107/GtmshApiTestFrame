@@ -8,6 +8,7 @@
 from selenium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.common.keys import Keys
 from Comm.log import log_init
 import os,time,logging,datetime
 from PIL import ImageGrab,Image
@@ -48,6 +49,11 @@ class selenium():
         #options.add_argument('incognito')
         #禁止图片加载
         #options.add_argument('blink-settings=imagesEnabled=false')
+        #关闭密码框
+        prefs = {}
+        prefs["credentials_enable_service"] = False
+        prefs["profile.password_manager_enabled"] = False
+        options.add_experimental_option('prefs',prefs)
 
         return options
 
@@ -202,4 +208,72 @@ class selenium():
             logger.exception("获取元素文本内容操作失败～")
             self.browser.save_screenshot(self._image_path)
             raise
+
+    def element_clear(self,locator,doc=''):
+        '''
+        清空元素内容
+        :param locator:定位器，元素定位（元祖类型：元素定位类型，元素定位方式）
+        :param doc:模块名——页面名称——操作名称
+        :return:none
+        '''
+        try:
+            self.get_element(locator,doc).clear()
+            logger.info(f'{doc}:清空{locator}元素内容')
+        except:
+            logger.exception("清除元素内容操作失败～")
+            self.browser.save_screenshot(self._image_path)
+            raise
+
+    def keyboard_keys(self,locator,keys,doc=''):
+        '''
+        键盘按键操作
+        :param locator:定位器，元素定位（元祖类型：元素定位类型，元素定位方式）
+        :param keys:需要操作的按键名，大写
+        :param doc:模块名——页面名称——操作名称
+        :常用按键有：
+                BACK_SPACE - 退格按钮
+                TAB - Tab 按钮
+                SHIFT - Shift 按钮
+                ALT - Alt按钮
+                SPACE - 空格按钮
+                PAGE_UP - 向上翻页按钮
+                PAGE_DOWN - 向下翻页按钮
+                F12 - 打开控制台
+                COMMAND - Win 按钮
+        '''
+        if keys == 'END':
+            self.get_element(locator,doc).send_keys(Keys.END)
+            logger.info(f'{doc}:对页面元素{locator}操作{keys}操作～')
+        elif keys == 'HOME':
+            self.get_element(locator,doc).send_keys(Keys.HOME)
+            logger.info(f'{doc}:对页面元素{locator}操作{keys}操作～')
+        elif keys == 'BACK_SPACE':
+            self.get_element(locator,doc).send_keys(Keys.BACK_SPACE)
+            logger.info(f'{doc}:对页面元素{locator}操作{keys}操作～')
+        elif keys == 'TAB':
+            self.get_element(locator,doc).send_keys(Keys.TAB)
+            logger.info(f'{doc}:对页面元素{locator}操作{keys}操作～')
+        elif keys == 'SHIFT':
+            self.get_element(locator,doc).send_keys(Keys.SHIFT)
+            logger.info(f'{doc}:对页面元素{locator}操作{keys}操作～')
+        elif keys == 'ALT':
+            self.get_element(locator,doc).send_keys(Keys.ALT)
+            logger.info(f'{doc}:对页面元素{locator}操作{keys}操作～')
+        elif keys == 'SPACE':
+            self.get_element(locator,doc).send_keys(Keys.SPACE)
+            logger.info(f'{doc}:对页面元素{locator}操作{keys}操作～')
+        elif keys == 'PAGE_UP':
+            self.get_element(locator,doc).send_keys(Keys.PAGE_UP)
+            logger.info(f'{doc}:对页面元素{locator}操作{keys}操作～')
+        elif keys == 'PAGE_DOWN':
+            self.get_element(locator,doc).send_keys(Keys.PAGE_DOWN)
+            logger.info(f'{doc}:对页面元素{locator}操作{keys}操作～')
+        elif keys == 'F12':
+            self.get_element(locator,doc).send_keys(Keys.F12)
+            logger.info(f'{doc}:对页面元素{locator}操作{keys}操作～')
+        elif keys == 'COMMAND':
+            self.get_element(locator,doc).send_keys(Keys.COMMAND)
+            logger.info(f'{doc}:对页面元素{locator}操作{keys}操作～')
+
+
 
