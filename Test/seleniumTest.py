@@ -54,7 +54,7 @@ class backstageTest():
         browser.input_text(('id','latitude'),'22.506521',doc)
         browser.keyboard_keys(('id','address'),'END',doc)
         #点击保存按钮
-        browser.click_element(('class','ant-btn mr10 ant-btn-primary'),doc)
+        browser.click_element(('xpath','//*[@id="root"]/div/div/div[2]/div[1]/div/div[2]/div/form/div[46]/button[1]'),doc)
         #退出浏览器
         browser.compulsory_wait(10, doc=doc)
         browser.quit_browser(doc)
