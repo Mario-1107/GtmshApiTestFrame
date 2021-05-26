@@ -76,3 +76,222 @@ selenium.common.exceptions.InvalidArgumentException: Message: invalid argument: 
 2021-05-24 14:07:37,626 Mario.selenium seleniumer.py [line:160] INFO  运营_门店管理_修改门店经纬度:点击元素：('xpath', '//*[@id="root"]/div/div/div[2]/div[1]/div/div[2]/div/form/div[46]/button[1]')
 2021-05-24 14:07:37,811 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计10秒
 2021-05-24 14:07:47,814 Mario.selenium seleniumer.py [line:96] INFO  运营_门店管理_修改门店经纬度:正在关闭浏览器～
+2021-05-25 10:50:18,890 Mario.selenium seleniumer.py [line:88] INFO  运营_门店管理_修改门店经纬度:正在打开网址:https://bk-test.gtmsh.com/admin/welcome
+2021-05-25 10:50:29,623 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计3秒
+2021-05-25 10:50:32,629 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('xpath', '//span[text()="运营"]')
+2021-05-25 10:50:32,634 Mario.selenium seleniumer.py [line:146] ERROR  查找元素失败！
+Traceback (most recent call last):
+  File "/Users/air/PycharmProjects/GtmshApiTestFrame/Comm/seleniumer.py", line 144, in get_element
+    return self.browser.find_element(*locator)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: window was already closed
+  (Session info: chrome=90.0.4430.212)
+
+2021-05-25 10:51:24,471 Mario.selenium seleniumer.py [line:88] INFO  运营_门店管理_修改门店经纬度:正在打开网址:https://bk-test.gtmsh.com/admin/welcome
+2021-05-25 10:51:27,536 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计3秒
+2021-05-25 10:51:30,539 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('xpath', '//span[text()="运营"]')
+2021-05-25 10:51:30,561 Mario.selenium seleniumer.py [line:146] ERROR  查找元素失败！
+Traceback (most recent call last):
+  File "/Users/air/PycharmProjects/GtmshApiTestFrame/Comm/seleniumer.py", line 144, in get_element
+    return self.browser.find_element(*locator)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()="运营"]"}
+  (Session info: chrome=90.0.4430.212)
+
+2021-05-25 11:47:41,717 Mario.selenium seleniumer.py [line:88] INFO  运营_门店管理_修改门店经纬度:正在打开网址:https://bk-test.gtmsh.com/admin/welcome
+2021-05-25 11:47:48,822 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计3秒
+2021-05-25 11:47:51,826 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('xpath', '//span[text()="运营"]')
+2021-05-25 11:47:51,838 Mario.selenium seleniumer.py [line:160] INFO  运营_门店管理_修改门店经纬度:点击元素：('xpath', '//span[text()="运营"]')
+2021-05-25 11:47:51,938 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计1秒
+2021-05-25 11:47:52,942 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('xpath', '//*[@id="root"]/div/aside/div[2]/div/a[3]/span')
+2021-05-25 11:47:52,955 Mario.selenium seleniumer.py [line:160] INFO  运营_门店管理_修改门店经纬度:点击元素：('xpath', '//*[@id="root"]/div/aside/div[2]/div/a[3]/span')
+2021-05-25 11:47:53,061 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计1秒
+2021-05-25 11:47:54,066 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('xpath', '//span[text()="探鱼"]')
+2021-05-25 11:47:54,076 Mario.selenium seleniumer.py [line:160] INFO  运营_门店管理_修改门店经纬度:点击元素：('xpath', '//span[text()="探鱼"]')
+2021-05-25 11:47:54,113 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计1秒
+2021-05-25 11:47:55,118 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('id', 'kmShopCode')
+2021-05-25 11:47:55,128 Mario.selenium seleniumer.py [line:179] INFO  运营_门店管理_修改门店经纬度:元素：('id', 'kmShopCode')输入内容:5999
+2021-05-25 11:47:55,406 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计2秒
+2021-05-25 11:47:57,410 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('xpath', '//*[@id="root"]/div/div/div[2]/div[1]/div/div[2]/div/div[1]/div/div[2]/div/form/div/div[5]/button[1]')
+2021-05-25 11:47:57,420 Mario.selenium seleniumer.py [line:160] INFO  运营_门店管理_修改门店经纬度:点击元素：('xpath', '//*[@id="root"]/div/div/div[2]/div[1]/div/div[2]/div/div[1]/div/div[2]/div/form/div/div[5]/button[1]')
+2021-05-25 11:47:57,534 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计1秒
+2021-05-25 11:47:58,538 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('xpath', ' //a[text()="编辑"]')
+2021-05-25 11:47:58,549 Mario.selenium seleniumer.py [line:160] INFO  运营_门店管理_修改门店经纬度:点击元素：('xpath', ' //a[text()="编辑"]')
+2021-05-25 11:47:58,643 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计1秒
+2021-05-25 11:47:59,648 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('id', 'longitude')
+2021-05-25 11:48:00,581 Mario.selenium seleniumer.py [line:221] INFO  运营_门店管理_修改门店经纬度:清空('id', 'longitude')元素内容
+2021-05-25 11:48:00,581 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('id', 'longitude')
+2021-05-25 11:48:00,590 Mario.selenium seleniumer.py [line:179] INFO  运营_门店管理_修改门店经纬度:元素：('id', 'longitude')输入内容:113.940887
+2021-05-25 11:48:01,016 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('id', 'latitude')
+2021-05-25 11:48:01,076 Mario.selenium seleniumer.py [line:221] INFO  运营_门店管理_修改门店经纬度:清空('id', 'latitude')元素内容
+2021-05-25 11:48:01,076 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('id', 'latitude')
+2021-05-25 11:48:01,097 Mario.selenium seleniumer.py [line:179] INFO  运营_门店管理_修改门店经纬度:元素：('id', 'latitude')输入内容:22.506521
+2021-05-25 11:48:01,633 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('id', 'address')
+2021-05-25 11:48:01,707 Mario.selenium seleniumer.py [line:246] INFO  运营_门店管理_修改门店经纬度:对页面元素('id', 'address')操作END操作～
+2021-05-25 11:48:01,707 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('xpath', '//*[@id="root"]/div/div/div[2]/div[1]/div/div[2]/div/form/div[46]/button[1]')
+2021-05-25 11:48:01,754 Mario.selenium seleniumer.py [line:160] INFO  运营_门店管理_修改门店经纬度:点击元素：('xpath', '//*[@id="root"]/div/div/div[2]/div[1]/div/div[2]/div/form/div[46]/button[1]')
+2021-05-25 11:48:02,080 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计10秒
+2021-05-25 11:48:12,083 Mario.selenium seleniumer.py [line:96] INFO  运营_门店管理_修改门店经纬度:正在关闭浏览器～
+2021-05-26 09:39:41,737 Mario.selenium seleniumer.py [line:88] INFO  运营_门店管理_修改门店经纬度:正在打开网址:https://bk-test.gtmsh.com/admin/welcome
+2021-05-26 09:39:46,230 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计3秒
+2021-05-26 09:39:49,232 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('xpath', '//span[text()="运营"]')
+2021-05-26 09:39:49,234 Mario.selenium seleniumer.py [line:146] ERROR  查找元素失败！
+Traceback (most recent call last):
+  File "/Users/air/PycharmProjects/GtmshApiTestFrame/Comm/seleniumer.py", line 144, in get_element
+    return self.browser.find_element(*locator)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=90.0.4430.212)
+
+2021-05-26 09:41:37,044 Mario.selenium seleniumer.py [line:88] INFO  运营_门店管理_修改门店经纬度:正在打开网址:https://bk-test.gtmsh.com/admin/welcome
+2021-05-26 09:41:39,246 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计3秒
+2021-05-26 09:41:42,250 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('xpath', '//span[text()="运营"]')
+2021-05-26 09:41:42,264 Mario.selenium seleniumer.py [line:160] INFO  运营_门店管理_修改门店经纬度:点击元素：('xpath', '//span[text()="运营"]')
+2021-05-26 09:41:42,366 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计1秒
+2021-05-26 09:41:43,367 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('xpath', '//*[@id="root"]/div/aside/div[2]/div/a[3]/span')
+2021-05-26 09:41:43,377 Mario.selenium seleniumer.py [line:160] INFO  运营_门店管理_修改门店经纬度:点击元素：('xpath', '//*[@id="root"]/div/aside/div[2]/div/a[3]/span')
+2021-05-26 09:41:43,485 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计1秒
+2021-05-26 09:41:44,488 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('xpath', '//span[text()="探鱼"]')
+2021-05-26 09:41:44,497 Mario.selenium seleniumer.py [line:160] INFO  运营_门店管理_修改门店经纬度:点击元素：('xpath', '//span[text()="探鱼"]')
+2021-05-26 09:41:44,541 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计1秒
+2021-05-26 09:41:45,543 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('id', 'kmShopCode')
+2021-05-26 09:41:45,554 Mario.selenium seleniumer.py [line:179] INFO  运营_门店管理_修改门店经纬度:元素：('id', 'kmShopCode')输入内容:5999
+2021-05-26 09:41:45,736 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计2秒
+2021-05-26 09:41:47,741 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('xpath', '//*[@id="root"]/div/div/div[2]/div[1]/div/div[2]/div/div[1]/div/div[2]/div/form/div/div[5]/button[1]')
+2021-05-26 09:41:47,751 Mario.selenium seleniumer.py [line:160] INFO  运营_门店管理_修改门店经纬度:点击元素：('xpath', '//*[@id="root"]/div/div/div[2]/div[1]/div/div[2]/div/div[1]/div/div[2]/div/form/div/div[5]/button[1]')
+2021-05-26 09:41:47,837 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计1秒
+2021-05-26 09:41:48,841 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('xpath', ' //a[text()="编辑"]')
+2021-05-26 09:41:48,852 Mario.selenium seleniumer.py [line:160] INFO  运营_门店管理_修改门店经纬度:点击元素：('xpath', ' //a[text()="编辑"]')
+2021-05-26 09:41:48,942 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计1秒
+2021-05-26 09:41:49,945 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('id', 'longitude')
+2021-05-26 09:41:50,520 Mario.selenium seleniumer.py [line:221] INFO  运营_门店管理_修改门店经纬度:清空('id', 'longitude')元素内容
+2021-05-26 09:41:50,520 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('id', 'longitude')
+2021-05-26 09:41:50,580 Mario.selenium seleniumer.py [line:179] INFO  运营_门店管理_修改门店经纬度:元素：('id', 'longitude')输入内容:113.940887
+2021-05-26 09:41:51,127 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('id', 'latitude')
+2021-05-26 09:41:51,181 Mario.selenium seleniumer.py [line:221] INFO  运营_门店管理_修改门店经纬度:清空('id', 'latitude')元素内容
+2021-05-26 09:41:51,181 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('id', 'latitude')
+2021-05-26 09:41:51,192 Mario.selenium seleniumer.py [line:179] INFO  运营_门店管理_修改门店经纬度:元素：('id', 'latitude')输入内容:22.506521
+2021-05-26 09:41:51,583 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('id', 'address')
+2021-05-26 09:41:51,637 Mario.selenium seleniumer.py [line:246] INFO  运营_门店管理_修改门店经纬度:对页面元素('id', 'address')操作END操作～
+2021-05-26 09:41:51,638 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('xpath', '//*[@id="root"]/div/div/div[2]/div[1]/div/div[2]/div/form/div[46]/button[1]')
+2021-05-26 09:41:51,654 Mario.selenium seleniumer.py [line:160] INFO  运营_门店管理_修改门店经纬度:点击元素：('xpath', '//*[@id="root"]/div/div/div[2]/div[1]/div/div[2]/div/form/div[46]/button[1]')
+2021-05-26 09:41:51,804 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计10秒
+2021-05-26 09:42:01,805 Mario.selenium seleniumer.py [line:96] INFO  运营_门店管理_修改门店经纬度:正在关闭浏览器～
+2021-05-26 09:43:28,069 Mario.selenium seleniumer.py [line:88] INFO  运营_门店管理_修改门店经纬度:正在打开网址:https://bk-test.gtmsh.com/admin/welcome
+2021-05-26 09:43:30,358 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计3秒
+2021-05-26 09:43:33,361 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('xpath', '//span[text()="运营"]')
+2021-05-26 09:43:33,372 Mario.selenium seleniumer.py [line:160] INFO  运营_门店管理_修改门店经纬度:点击元素：('xpath', '//span[text()="运营"]')
+2021-05-26 09:43:33,465 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计1秒
+2021-05-26 09:43:34,469 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('xpath', '//*[@id="root"]/div/aside/div[2]/div/a[3]/span')
+2021-05-26 09:43:34,481 Mario.selenium seleniumer.py [line:160] INFO  运营_门店管理_修改门店经纬度:点击元素：('xpath', '//*[@id="root"]/div/aside/div[2]/div/a[3]/span')
+2021-05-26 09:43:34,565 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计1秒
+2021-05-26 09:43:35,567 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('xpath', '//span[text()="探鱼"]')
+2021-05-26 09:43:35,577 Mario.selenium seleniumer.py [line:160] INFO  运营_门店管理_修改门店经纬度:点击元素：('xpath', '//span[text()="探鱼"]')
+2021-05-26 09:43:35,624 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计1秒
+2021-05-26 09:43:36,627 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('id', 'kmShopCode')
+2021-05-26 09:43:36,636 Mario.selenium seleniumer.py [line:179] INFO  运营_门店管理_修改门店经纬度:元素：('id', 'kmShopCode')输入内容:5999
+2021-05-26 09:43:36,893 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计2秒
+2021-05-26 09:43:38,895 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('xpath', '//*[@id="root"]/div/div/div[2]/div[1]/div/div[2]/div/div[1]/div/div[2]/div/form/div/div[5]/button[1]')
+2021-05-26 09:43:38,906 Mario.selenium seleniumer.py [line:160] INFO  运营_门店管理_修改门店经纬度:点击元素：('xpath', '//*[@id="root"]/div/div/div[2]/div[1]/div/div[2]/div/div[1]/div/div[2]/div/form/div/div[5]/button[1]')
+2021-05-26 09:43:38,988 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计1秒
+2021-05-26 09:43:39,990 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('xpath', ' //a[text()="编辑"]')
+2021-05-26 09:43:40,000 Mario.selenium seleniumer.py [line:160] INFO  运营_门店管理_修改门店经纬度:点击元素：('xpath', ' //a[text()="编辑"]')
+2021-05-26 09:43:40,087 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计1秒
+2021-05-26 09:43:41,088 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('id', 'longitude')
+2021-05-26 09:43:41,644 Mario.selenium seleniumer.py [line:221] INFO  运营_门店管理_修改门店经纬度:清空('id', 'longitude')元素内容
+2021-05-26 09:43:41,644 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('id', 'longitude')
+2021-05-26 09:43:41,713 Mario.selenium seleniumer.py [line:179] INFO  运营_门店管理_修改门店经纬度:元素：('id', 'longitude')输入内容:113.940887
+2021-05-26 09:43:42,151 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('id', 'latitude')
+2021-05-26 09:43:42,199 Mario.selenium seleniumer.py [line:221] INFO  运营_门店管理_修改门店经纬度:清空('id', 'latitude')元素内容
+2021-05-26 09:43:42,199 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('id', 'latitude')
+2021-05-26 09:43:42,214 Mario.selenium seleniumer.py [line:179] INFO  运营_门店管理_修改门店经纬度:元素：('id', 'latitude')输入内容:22.506521
+2021-05-26 09:43:42,654 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('id', 'address')
+2021-05-26 09:43:42,712 Mario.selenium seleniumer.py [line:246] INFO  运营_门店管理_修改门店经纬度:对页面元素('id', 'address')操作END操作～
+2021-05-26 09:43:42,713 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('xpath', '//*[@id="root"]/div/div/div[2]/div[1]/div/div[2]/div/form/div[46]/button[1]')
+2021-05-26 09:43:42,733 Mario.selenium seleniumer.py [line:160] INFO  运营_门店管理_修改门店经纬度:点击元素：('xpath', '//*[@id="root"]/div/div/div[2]/div[1]/div/div[2]/div/form/div[46]/button[1]')
+2021-05-26 09:43:42,928 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计10秒
+2021-05-26 09:43:52,931 Mario.selenium seleniumer.py [line:96] INFO  运营_门店管理_修改门店经纬度:正在关闭浏览器～
+2021-05-26 09:45:28,252 Mario.selenium seleniumer.py [line:88] INFO  运营_门店管理_修改门店经纬度:正在打开网址:https://bk-test.gtmsh.com/admin/welcome
+2021-05-26 09:45:30,333 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计3秒
+2021-05-26 09:45:33,335 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('xpath', '//span[text()="运营"]')
+2021-05-26 09:45:33,346 Mario.selenium seleniumer.py [line:160] INFO  运营_门店管理_修改门店经纬度:点击元素：('xpath', '//span[text()="运营"]')
+2021-05-26 09:45:33,454 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计1秒
+2021-05-26 09:45:34,456 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('xpath', '//*[@id="root"]/div/aside/div[2]/div/a[3]/span')
+2021-05-26 09:45:34,466 Mario.selenium seleniumer.py [line:160] INFO  运营_门店管理_修改门店经纬度:点击元素：('xpath', '//*[@id="root"]/div/aside/div[2]/div/a[3]/span')
+2021-05-26 09:45:34,567 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计1秒
+2021-05-26 09:45:35,571 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('xpath', '//span[text()="探鱼"]')
+2021-05-26 09:45:35,595 Mario.selenium seleniumer.py [line:160] INFO  运营_门店管理_修改门店经纬度:点击元素：('xpath', '//span[text()="探鱼"]')
+2021-05-26 09:45:35,658 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计1秒
+2021-05-26 09:45:36,663 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('id', 'kmShopCode')
+2021-05-26 09:45:36,672 Mario.selenium seleniumer.py [line:179] INFO  运营_门店管理_修改门店经纬度:元素：('id', 'kmShopCode')输入内容:5999
+2021-05-26 09:45:36,835 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计2秒
+2021-05-26 09:45:38,841 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('xpath', '//*[@id="root"]/div/div/div[2]/div[1]/div/div[2]/div/div[1]/div/div[2]/div/form/div/div[5]/button[1]')
+2021-05-26 09:45:38,852 Mario.selenium seleniumer.py [line:160] INFO  运营_门店管理_修改门店经纬度:点击元素：('xpath', '//*[@id="root"]/div/div/div[2]/div[1]/div/div[2]/div/div[1]/div/div[2]/div/form/div/div[5]/button[1]')
+2021-05-26 09:45:38,935 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计1秒
+2021-05-26 09:45:39,939 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('xpath', ' //a[text()="编辑"]')
+2021-05-26 09:45:39,951 Mario.selenium seleniumer.py [line:160] INFO  运营_门店管理_修改门店经纬度:点击元素：('xpath', ' //a[text()="编辑"]')
+2021-05-26 09:45:40,040 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计1秒
+2021-05-26 09:45:41,044 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('id', 'longitude')
+2021-05-26 09:45:41,524 Mario.selenium seleniumer.py [line:221] INFO  运营_门店管理_修改门店经纬度:清空('id', 'longitude')元素内容
+2021-05-26 09:45:41,525 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('id', 'longitude')
+2021-05-26 09:45:41,568 Mario.selenium seleniumer.py [line:179] INFO  运营_门店管理_修改门店经纬度:元素：('id', 'longitude')输入内容:113.940887
+2021-05-26 09:45:41,938 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('id', 'latitude')
+2021-05-26 09:45:41,997 Mario.selenium seleniumer.py [line:221] INFO  运营_门店管理_修改门店经纬度:清空('id', 'latitude')元素内容
+2021-05-26 09:45:41,997 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('id', 'latitude')
+2021-05-26 09:45:42,033 Mario.selenium seleniumer.py [line:179] INFO  运营_门店管理_修改门店经纬度:元素：('id', 'latitude')输入内容:22.506521
+2021-05-26 09:45:42,425 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('id', 'address')
+2021-05-26 09:45:42,496 Mario.selenium seleniumer.py [line:246] INFO  运营_门店管理_修改门店经纬度:对页面元素('id', 'address')操作END操作～
+2021-05-26 09:45:42,496 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('xpath', '//*[@id="root"]/div/div/div[2]/div[1]/div/div[2]/div/form/div[46]/button[1]')
+2021-05-26 09:45:42,529 Mario.selenium seleniumer.py [line:160] INFO  运营_门店管理_修改门店经纬度:点击元素：('xpath', '//*[@id="root"]/div/div/div[2]/div[1]/div/div[2]/div/form/div[46]/button[1]')
+2021-05-26 09:45:42,773 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计10秒
+2021-05-26 09:45:52,779 Mario.selenium seleniumer.py [line:96] INFO  运营_门店管理_修改门店经纬度:正在关闭浏览器～
+2021-05-26 09:45:56,256 Mario.selenium seleniumer.py [line:88] INFO  运营_门店管理_修改门店经纬度:正在打开网址:https://bk-test.gtmsh.com/admin/welcome
+2021-05-26 09:45:58,426 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计3秒
+2021-05-26 09:46:01,426 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('xpath', '//span[text()="运营"]')
+2021-05-26 09:46:01,440 Mario.selenium seleniumer.py [line:160] INFO  运营_门店管理_修改门店经纬度:点击元素：('xpath', '//span[text()="运营"]')
+2021-05-26 09:46:01,567 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计1秒
+2021-05-26 09:46:02,570 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('xpath', '//*[@id="root"]/div/aside/div[2]/div/a[3]/span')
+2021-05-26 09:46:02,587 Mario.selenium seleniumer.py [line:160] INFO  运营_门店管理_修改门店经纬度:点击元素：('xpath', '//*[@id="root"]/div/aside/div[2]/div/a[3]/span')
+2021-05-26 09:46:02,688 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计1秒
+2021-05-26 09:46:03,693 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('xpath', '//span[text()="探鱼"]')
+2021-05-26 09:46:03,703 Mario.selenium seleniumer.py [line:160] INFO  运营_门店管理_修改门店经纬度:点击元素：('xpath', '//span[text()="探鱼"]')
+2021-05-26 09:46:03,738 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计1秒
+2021-05-26 09:46:04,742 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('id', 'kmShopCode')
+2021-05-26 09:46:04,751 Mario.selenium seleniumer.py [line:179] INFO  运营_门店管理_修改门店经纬度:元素：('id', 'kmShopCode')输入内容:5999
+2021-05-26 09:46:04,942 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计2秒
+2021-05-26 09:46:06,944 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('xpath', '//*[@id="root"]/div/div/div[2]/div[1]/div/div[2]/div/div[1]/div/div[2]/div/form/div/div[5]/button[1]')
+2021-05-26 09:46:06,958 Mario.selenium seleniumer.py [line:160] INFO  运营_门店管理_修改门店经纬度:点击元素：('xpath', '//*[@id="root"]/div/div/div[2]/div[1]/div/div[2]/div/div[1]/div/div[2]/div/form/div/div[5]/button[1]')
+2021-05-26 09:46:07,036 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计1秒
+2021-05-26 09:46:08,040 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('xpath', ' //a[text()="编辑"]')
+2021-05-26 09:46:08,050 Mario.selenium seleniumer.py [line:160] INFO  运营_门店管理_修改门店经纬度:点击元素：('xpath', ' //a[text()="编辑"]')
+2021-05-26 09:46:08,153 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计1秒
+2021-05-26 09:46:09,156 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('id', 'longitude')
+2021-05-26 09:46:09,784 Mario.selenium seleniumer.py [line:221] INFO  运营_门店管理_修改门店经纬度:清空('id', 'longitude')元素内容
+2021-05-26 09:46:09,785 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('id', 'longitude')
+2021-05-26 09:46:09,828 Mario.selenium seleniumer.py [line:179] INFO  运营_门店管理_修改门店经纬度:元素：('id', 'longitude')输入内容:113.940887
+2021-05-26 09:46:10,229 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('id', 'latitude')
+2021-05-26 09:46:10,270 Mario.selenium seleniumer.py [line:221] INFO  运营_门店管理_修改门店经纬度:清空('id', 'latitude')元素内容
+2021-05-26 09:46:10,270 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('id', 'latitude')
+2021-05-26 09:46:10,285 Mario.selenium seleniumer.py [line:179] INFO  运营_门店管理_修改门店经纬度:元素：('id', 'latitude')输入内容:22.506521
+2021-05-26 09:46:10,700 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('id', 'address')
+2021-05-26 09:46:10,775 Mario.selenium seleniumer.py [line:246] INFO  运营_门店管理_修改门店经纬度:对页面元素('id', 'address')操作END操作～
+2021-05-26 09:46:10,775 Mario.selenium seleniumer.py [line:142] INFO  运营_门店管理_修改门店经纬度:查找元素：('xpath', '//*[@id="root"]/div/div/div[2]/div[1]/div/div[2]/div/form/div[46]/button[1]')
+2021-05-26 09:46:10,811 Mario.selenium seleniumer.py [line:160] INFO  运营_门店管理_修改门店经纬度:点击元素：('xpath', '//*[@id="root"]/div/div/div[2]/div[1]/div/div[2]/div/form/div[46]/button[1]')
+2021-05-26 09:46:11,034 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计10秒
+2021-05-26 09:46:21,035 Mario.selenium seleniumer.py [line:96] INFO  运营_门店管理_修改门店经纬度:正在关闭浏览器～

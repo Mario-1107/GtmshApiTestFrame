@@ -59,8 +59,6 @@ class backstageTest():
         browser.compulsory_wait(10, doc=doc)
         browser.quit_browser(doc)
 
-c = backstageTest()
-c.modify_StoreInfo('探鱼',"5999")
 
 
 

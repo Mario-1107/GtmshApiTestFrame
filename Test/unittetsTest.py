@@ -6,12 +6,13 @@
 @describe：
 """
 import unittest
-
+from Test.seleniumTest import backstageTest
 #应用unittest框架：必须在类名继承unittest.TestCase
 class unittestdemo(unittest.TestCase):
 
     def test_t1(self):
-        print("测试用例1")
+        t = backstageTest()
+        t.modify_StoreInfo('探鱼','5999')
 
     def test_t2(self):
         print("测试用例2")
