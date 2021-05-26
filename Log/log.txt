@@ -295,3 +295,46 @@ from unknown error: web view not found
 2021-05-26 09:46:10,811 Mario.selenium seleniumer.py [line:160] INFO  运营_门店管理_修改门店经纬度:点击元素：('xpath', '//*[@id="root"]/div/div/div[2]/div[1]/div/div[2]/div/form/div[46]/button[1]')
 2021-05-26 09:46:11,034 Mario.selenium seleniumer.py [line:193] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计10秒
 2021-05-26 09:46:21,035 Mario.selenium seleniumer.py [line:96] INFO  运营_门店管理_修改门店经纬度:正在关闭浏览器～
+2021-05-26 18:28:36,787 Mario.selenium Key_word_tooler.py [line:30] ERROR  打开指定浏览器失败，自动打开谷歌浏览器～错误信息：module 'selenium.webdriver' has no attribute 'cho'，
+2021-05-26 18:30:11,143 Mario.selenium Key_word_tooler.py [line:30] ERROR  打开指定浏览器失败，自动打开谷歌浏览器～错误信息：'module' object is not callable，
+2021-05-26 18:30:45,958 Mario.selenium Key_word_tooler.py [line:30] ERROR  打开指定浏览器失败，自动打开谷歌浏览器～错误信息：Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+，
+2021-05-26 18:32:31,332 Mario.selenium Key_word_tooler.py [line:30] ERROR  打开指定浏览器失败，自动打开谷歌浏览器～错误信息：Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+，
+2021-05-26 18:33:08,611 Mario.selenium Key_word_tooler.py [line:30] ERROR  打开指定浏览器失败，自动打开谷歌浏览器～错误信息：Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+，
+2021-05-26 18:33:12,095 Mario.selenium Key_word_tooler.py [line:105] INFO  运营_门店管理_修改门店经纬度:正在打开网址:https://bk-test.gtmsh.com/admin/welcome
+2021-05-26 18:33:22,500 Mario.selenium Key_word_tooler.py [line:210] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计3秒
+2021-05-26 18:33:25,503 Mario.selenium Key_word_tooler.py [line:159] INFO  运营_门店管理_修改门店经纬度:查找元素：('xpath', '//span[text()="运营"]')
+2021-05-26 18:33:25,505 Mario.selenium Key_word_tooler.py [line:163] ERROR  查找元素失败！
+Traceback (most recent call last):
+  File "/Users/air/PycharmProjects/GtmshApiTestFrame/Comm/Key_word_tooler.py", line 161, in get_element
+    return self.browser.find_element(*locator)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=90.0.4430.212)
+
+2021-05-26 18:35:18,819 Mario.selenium Key_word_tooler.py [line:30] ERROR  打开指定浏览器失败，自动打开谷歌浏览器～错误信息：Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+，
+2021-05-26 18:35:22,107 Mario.selenium Key_word_tooler.py [line:105] INFO  运营_门店管理_修改门店经纬度:正在打开网址:https://bk-test.gtmsh.com/admin/welcome
+2021-05-26 18:35:24,040 Mario.selenium Key_word_tooler.py [line:210] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计3秒
+2021-05-26 18:35:27,043 Mario.selenium Key_word_tooler.py [line:159] INFO  运营_门店管理_修改门店经纬度:查找元素：('xpath', '//span[text()="运营"]')
+2021-05-26 18:35:27,063 Mario.selenium Key_word_tooler.py [line:163] ERROR  查找元素失败！
+Traceback (most recent call last):
+  File "/Users/air/PycharmProjects/GtmshApiTestFrame/Comm/Key_word_tooler.py", line 161, in get_element
+    return self.browser.find_element(*locator)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()="运营"]"}
+  (Session info: chrome=90.0.4430.212)
+

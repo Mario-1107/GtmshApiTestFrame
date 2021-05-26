@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="c7caa3fc-ab5b-4239-8851-ea45133d4c75" name="Default Changelist" comment="优化selenium模块封装">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Comm/seleniumer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Comm/Key_word_tooler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comm/Email.py" beforeDir="false" afterPath="$PROJECT_DIR$/Comm/Email.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comm/Key_word_tooler.py" beforeDir="false" afterPath="$PROJECT_DIR$/Comm/Key_word_tooler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comm/log.py" beforeDir="false" afterPath="$PROJECT_DIR$/Comm/log.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Log/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Log/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/memberApiTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/memberApiTest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/seleniumTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/seleniumTest.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,13 +39,13 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Comm/data.py" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Comm/Email.py" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Comm/Key_word_tooler.py" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Comm/Key_word_tooler.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Test/tapdApiTest.py" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Test/memberApiTest.py" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Test/memberApiTest.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Comm/Screenshot.py" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Test/beautifulReport.py" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Test/test.py" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Test/seleniumTest.py" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Test/seleniumTest.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Conf/config.py" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Conf/config.ini" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Comm/log.py" root0="SKIP_HIGHLIGHTING" />
@@ -61,7 +65,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Test" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -79,7 +83,7 @@
       <recent name="$PROJECT_DIR$/Test" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for unittetsTest.unittestdemo">
+  <component name="RunManager" selected="Python tests.Unittests in unittetsTest.py">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="GtmshApiTestFrame" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -180,11 +184,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests for unittetsTest.unittestdemo" />
-        <item itemvalue="Python tests.Unittests for unittetsTest.unittestdemo.test_t1" />
-        <item itemvalue="Python tests.Unittests for unittetsTest.unittestdemo.test_t2" />
         <item itemvalue="Python tests.Unittests in unittetsTest.py" />
+        <item itemvalue="Python tests.Unittests for unittetsTest.unittestdemo.test_t1" />
+        <item itemvalue="Python tests.Unittests for unittetsTest.unittestdemo" />
         <item itemvalue="Python.seleniumTest" />
+        <item itemvalue="Python tests.Unittests for unittetsTest.unittestdemo.test_t2" />
       </list>
     </recent_temporary>
   </component>
@@ -386,7 +390,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621996639986</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="优化selenium模块封装">
+      <created>1622018458840</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1622018458840</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
