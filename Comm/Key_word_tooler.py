@@ -1,7 +1,7 @@
 # -*- coding+: utf-8 -*-
 """
 @author:Kirito
-@file:seleniumer.py
+@file:Key_word_tooler.py
 @time:2021/05/14
 @describe：
 """
@@ -15,7 +15,7 @@ from PIL import ImageGrab,Image
 log_init()
 logger = logging.getLogger('Mario.selenium')
 
-class selenium():
+class KeyWordTooler():
     #截图文件保存路径:
     # 基础目录
     _baseHome = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
@@ -137,7 +137,7 @@ class selenium():
         查找元素
         :param locator:定位器，元素定位（元祖类型：元素定位类型，元素定位方式）
         :param doc:模块名——页面名称——操作名称
-        :return:
+        :return:返回查找到的元素
         '''
         logger.info(f"{doc}:查找元素：{locator}")
         try:

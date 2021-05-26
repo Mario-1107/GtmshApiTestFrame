@@ -6,7 +6,7 @@
 @describe：selenium功能测试
 """
 import unittest
-from Comm.seleniumer import selenium
+from Comm.Key_word_tooler import KeyWordTooler
 from Conf.config import sys_cfg
 import time
 
@@ -18,7 +18,7 @@ class backstageTest():
         :return:
         '''
         doc = '运营_门店管理_修改门店经纬度'
-        browser = selenium()
+        browser = KeyWordTooler()
         #登录餐饮中台
         browser.open_url(sys_cfg['oa_url'],doc)
         #强制等待，等待页面元素加载完成
