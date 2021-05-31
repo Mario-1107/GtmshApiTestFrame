@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7caa3fc-ab5b-4239-8851-ea45133d4c75" name="Default Changelist" comment="优化selenium模块封装">
+    <list default="true" id="c7caa3fc-ab5b-4239-8851-ea45133d4c75" name="Default Changelist" comment="新增open_browser方法，增加反射机制">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Comm/Email.py" beforeDir="false" afterPath="$PROJECT_DIR$/Comm/Email.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Comm/Key_word_tooler.py" beforeDir="false" afterPath="$PROJECT_DIR$/Comm/Key_word_tooler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Comm/log.py" beforeDir="false" afterPath="$PROJECT_DIR$/Comm/log.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Log/Screen/20210521_1621593823620.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Log/Screen/20210521_1621593964365.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Log/Screen/20210524_1621836351933.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Log/Screen/20210525_1621911081428.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Log/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Log/log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/memberApiTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/memberApiTest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/seleniumTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/seleniumTest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/unittetsTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/unittetsTest.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +85,7 @@
       <recent name="$PROJECT_DIR$/Test" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in unittetsTest.py">
+  <component name="RunManager" selected="Python tests.Unittests for unittetsTest.unittestdemo.test_t1">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="GtmshApiTestFrame" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -184,10 +186,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests in unittetsTest.py" />
         <item itemvalue="Python tests.Unittests for unittetsTest.unittestdemo.test_t1" />
-        <item itemvalue="Python tests.Unittests for unittetsTest.unittestdemo" />
+        <item itemvalue="Python tests.Unittests in unittetsTest.py" />
         <item itemvalue="Python.seleniumTest" />
+        <item itemvalue="Python tests.Unittests for unittetsTest.unittestdemo" />
         <item itemvalue="Python tests.Unittests for unittetsTest.unittestdemo.test_t2" />
       </list>
     </recent_temporary>
@@ -397,7 +399,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622018458840</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="新增open_browser方法，增加反射机制">
+      <created>1622025469365</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1622025469365</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -423,7 +432,8 @@
     <MESSAGE value="新增邮件发送" />
     <MESSAGE value="新增selenium模块封装" />
     <MESSAGE value="优化selenium模块封装" />
-    <option name="LAST_COMMIT_MESSAGE" value="优化selenium模块封装" />
+    <MESSAGE value="新增open_browser方法，增加反射机制" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增open_browser方法，增加反射机制" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

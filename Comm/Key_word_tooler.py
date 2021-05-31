@@ -11,25 +11,11 @@ from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.common.keys import Keys
 from Comm.log import log_init
 import os, time, logging, datetime
-from PIL import ImageGrab, Image
+from PIL import Image
+import pytesseract
 
 log_init()
 logger = logging.getLogger('Mario.selenium')
-
-
-def open_browser(type_):
-    '''
-    打开一个指定的浏览器：
-    :param type_: 浏览器类型
-    :return:
-    '''
-    # 基于反射的形式来简化代码
-    try:
-        browser = getattr(webdriver, type_)()
-    except Exception as e:
-        logger.error(f"打开指定浏览器失败，自动打开谷歌浏览器～错误信息：{e}，")
-        browser = webdriver.Chrome(r'/Users/air/Desktop/Test/chromedriver',options=self.options())
-    return browser
 
 
 class KeyWordTooler():
@@ -41,14 +27,27 @@ class KeyWordTooler():
     _screen_path = os.path.join(_baseHome, 'Log', 'Screen', _today)
     _image_path = '{0}_{1}.png'.format(_screen_path, str(round(time.time() * 1000)))
 
-    def __init__(self, type_):
+    def open_browser(self, type_):
+        '''
+        打开一个指定的浏览器：
+        :param type_: 浏览器类型
+        :return:返回一个浏览器对象
+        '''
+        # 基于反射的机制来简化代码
+        try:
+            browser = getattr(webdriver, type_)()
+        except Exception as e:
+            logger.error("打开指定浏览器失败，自动打开谷歌浏览器～")
+            browser = webdriver.Chrome(r'/Users/air/Desktop/Test/chromedriver', options=self.options())
+        return browser
+
+    def __init__(self, type_='Chrome'):
         '''
         构造函数
         :param type_: 考虑到不同的driver对象可能是任意一种浏览器
         '''
         # self.browser = webdriver.Chrome(r'/Users/air/Desktop/Test/chromedriver',options=self.options())
-        self.browser = open_browser(type_)
-
+        self.browser = self.open_browser(type_)
     def options(self):
         '''
         ChromeOptions配置
@@ -61,9 +60,9 @@ class KeyWordTooler():
         # 去掉浏览器自动化警告条
         options.add_experimental_option('excludeSwitches', ['enable-automation'])
         # 加载浏览器缓存：/Users/air/Library/Application Support/Google/Chrome/
-        options.add_argument(r'--user-data-dir=/Users/air/Library/Application Support/Google/Chrome/')
+        #options.add_argument(r'--user-data-dir=/Users/air/Library/Application Support/Google/Chrome/')
         # 无界面模式
-        #options.add_argument('headless')
+        # options.add_argument('headless')
         # 隐身模式
         # options.add_argument('incognito')
         # 禁止图片加载
@@ -78,23 +77,25 @@ class KeyWordTooler():
 
     def get_image_code(self):
         '''
-        验证码截取
+        验证码截取并识别
         :return:图片路径
         '''
         # 截图整个屏幕并保存
-        self.browser.save_screenshot(self._code_image_path)
+        self.browser.save_screenshot(self._image_path)
         # 定位到验证码元素
-        code_element = self.browser.find_element_by_class_name("verify_code_img___1Mei_")
+        code_element = self.browser.find_element_by_id("validateCode")
         # 定位到截图位置
         left = code_element.location['x']
         top = code_element.location['y']
-        right = code_element.location['width'] + left
-        bottom = code_element.location['height'] + top
+        right = code_element.size['width'] + left
+        bottom = code_element.size['height'] + top
         # 从文件读取截图，截取验证码位置再次保存
-        im = Image.open(self._code_image_path)
+        im = Image.open(self._image_path)
         img = im.crop((left, top, right, bottom))
         img.save(self._image_path)
-        return self._image_path
+        code = Image.open(r'/Users/air/PycharmProjects/GtmshApiTestFrame/Log/Screen/20210531_1622455462162.png')
+        code_string = pytesseract.image_to_string(code)
+        return code_string
 
     def open_url(self, url, doc=''):
         '''

@@ -19,7 +19,7 @@ class backstageTest():
         :return:
         '''
         doc = '运营_门店管理_修改门店经纬度'
-        browser = KeyWordTooler('Chrome')
+        browser = KeyWordTooler()
         # 登录餐饮中台
         browser.open_url(sys_cfg['oa_url'], doc)
         # 强制等待，等待页面元素加载完成
@@ -62,6 +62,39 @@ class backstageTest():
         # 退出浏览器
         browser.compulsory_wait(10, doc=doc)
         browser.quit_browser(doc)
+
+    def loging_(self):
+        '''
+        登录模块
+        :return:
+        '''
+        doc = '首页-登录'
+        browser = KeyWordTooler()
+        # 登录餐饮中台
+        browser.open_url(sys_cfg['oa_url'], doc)
+        # 强制等待，等待页面元素加载完成
+        browser.compulsory_wait(3, doc=doc)
+        #点击二维码选择手动登录
+        browser.click_element(('xpath','//*[@id="jingtaimima"]/a'),doc)
+        #输入账号密码
+        browser.input_text(('id','username'),'V_wuyanwen',doc)
+        browser.input_text(('id','pwd'),'GT123',doc)
+        browser.compulsory_wait(3,doc)
+        #截取验证码
+        img_code = browser.get_image_code()
+        print(img_code)
+
+
+        # 退出浏览器
+        browser.compulsory_wait(3, doc=doc)
+        browser.quit_browser(doc)
+
+
+
+
+
+
+
 
 # def get_code_image(file_name):
 #      driver.save_screenshot(file_name) # 截取整个屏幕并保存

@@ -12,7 +12,7 @@ class unittestdemo(unittest.TestCase):
 
     def test_t1(self):
         t = backstageTest()
-        t.modify_StoreInfo('探鱼','5999')
+        t.loging_()
 
     def test_t2(self):
         print("测试用例2")
