@@ -26,7 +26,7 @@ class KeyWordTooler():
     _today = time.strftime("%Y%m%d")
     _screen_path = os.path.join(_baseHome, 'Log', 'Screen', _today)
     _image_path = '{0}_{1}.png'.format(_screen_path, str(round(time.time() * 1000)))
-
+    _webdriver_path = os.path.join(_baseHome,'Test','browser_webdriver/chromedriver')
     def open_browser(self, type_):
         '''
         打开一个指定的浏览器：
@@ -38,7 +38,7 @@ class KeyWordTooler():
             browser = getattr(webdriver, type_)()
         except Exception as e:
             logger.error("打开指定浏览器失败，自动打开谷歌浏览器～")
-            browser = webdriver.Chrome(r'/Users/air/Desktop/Test/chromedriver', options=self.options())
+            browser = webdriver.Chrome(self._webdriver_path, options=self.options())
         return browser
 
     def __init__(self, type_='Chrome'):
@@ -48,6 +48,7 @@ class KeyWordTooler():
         '''
         # self.browser = webdriver.Chrome(r'/Users/air/Desktop/Test/chromedriver',options=self.options())
         self.browser = self.open_browser(type_)
+        
     def options(self):
         '''
         ChromeOptions配置

@@ -1,26 +1,8 @@
-2021-05-31 17:17:39,007 Mario.selenium Key_word_tooler.py [line:39] ERROR  打开指定浏览器失败，自动打开谷歌浏览器～错误信息
-2021-05-31 17:17:42,742 Mario.selenium Key_word_tooler.py [line:104] INFO  首页-登录:正在打开网址:https://bk-test.gtmsh.com/admin/welcome
-2021-05-31 17:19:00,910 Mario.selenium Key_word_tooler.py [line:39] ERROR  打开指定浏览器失败，自动打开谷歌浏览器～错误信息
-2021-05-31 17:19:03,981 Mario.selenium Key_word_tooler.py [line:103] INFO  首页-登录:正在打开网址:https://bk-test.gtmsh.com/admin/welcome
-2021-05-31 17:19:07,021 Mario.selenium Key_word_tooler.py [line:208] INFO  首页-登录:强制等待中，共计3秒
-2021-05-31 17:19:10,025 Mario.selenium Key_word_tooler.py [line:157] INFO  首页-登录:查找元素：('xpath', '//*[@id="jingtaimima"]/a')
-2021-05-31 17:19:10,088 Mario.selenium Key_word_tooler.py [line:175] INFO  首页-登录:点击元素：('xpath', '//*[@id="jingtaimima"]/a')
-2021-05-31 17:19:10,161 Mario.selenium Key_word_tooler.py [line:208] INFO  首页-登录:强制等待中，共计3秒
-2021-05-31 17:19:13,162 Mario.selenium Key_word_tooler.py [line:111] INFO  首页-登录:正在关闭浏览器～
-2021-05-31 17:27:49,468 Mario.selenium Key_word_tooler.py [line:40] ERROR  打开指定浏览器失败，自动打开谷歌浏览器～错误信息
-2021-05-31 17:27:53,256 Mario.selenium Key_word_tooler.py [line:106] INFO  首页-登录:正在打开网址:https://bk-test.gtmsh.com/admin/welcome
-2021-05-31 17:27:55,216 Mario.selenium Key_word_tooler.py [line:211] INFO  首页-登录:强制等待中，共计3秒
-2021-05-31 17:27:58,218 Mario.selenium Key_word_tooler.py [line:160] INFO  首页-登录:查找元素：('xpath', '//*[@id="jingtaimima"]/a')
-2021-05-31 17:27:58,244 Mario.selenium Key_word_tooler.py [line:178] INFO  首页-登录:点击元素：('xpath', '//*[@id="jingtaimima"]/a')
-2021-05-31 17:27:58,309 Mario.selenium Key_word_tooler.py [line:160] INFO  首页-登录:查找元素：('id', 'username')
-2021-05-31 17:27:58,320 Mario.selenium Key_word_tooler.py [line:197] INFO  首页-登录:元素：('id', 'username')输入内容:V_wuyanwen
-2021-05-31 17:27:58,472 Mario.selenium Key_word_tooler.py [line:160] INFO  首页-登录:查找元素：('id', 'pwd')
-2021-05-31 17:27:58,486 Mario.selenium Key_word_tooler.py [line:197] INFO  首页-登录:元素：('id', 'pwd')输入内容:GT123
-2021-05-31 17:30:25,068 Mario.selenium Key_word_tooler.py [line:40] ERROR  打开指定浏览器失败，自动打开谷歌浏览器～错误信息
-2021-05-31 17:30:28,340 Mario.selenium Key_word_tooler.py [line:106] INFO  首页-登录:正在打开网址:https://bk-test.gtmsh.com/admin/welcome
-2021-05-31 17:30:30,157 Mario.selenium Key_word_tooler.py [line:211] INFO  首页-登录:强制等待中，共计3秒
-2021-05-31 17:30:33,161 Mario.selenium Key_word_tooler.py [line:160] INFO  首页-登录:查找元素：('xpath', '//*[@id="jingtaimima"]/a')
-2021-05-31 17:30:33,178 Mario.selenium Key_word_tooler.py [line:164] ERROR  查找元素失败！
+2021-06-02 14:44:42,982 Mario.selenium Key_word_tooler.py [line:40] ERROR  打开指定浏览器失败，自动打开谷歌浏览器～
+2021-06-02 14:44:46,470 Mario.selenium Key_word_tooler.py [line:106] INFO  运营_门店管理_修改门店经纬度:正在打开网址:https://bk-test.gtmsh.com/admin/welcome
+2021-06-02 14:44:48,069 Mario.selenium Key_word_tooler.py [line:211] INFO  运营_门店管理_修改门店经纬度:强制等待中，共计3秒
+2021-06-02 14:44:51,075 Mario.selenium Key_word_tooler.py [line:160] INFO  运营_门店管理_修改门店经纬度:查找元素：('xpath', '//span[text()="运营"]')
+2021-06-02 14:44:51,093 Mario.selenium Key_word_tooler.py [line:164] ERROR  查找元素失败！
 Traceback (most recent call last):
   File "/Users/air/PycharmProjects/GtmshApiTestFrame/Comm/Key_word_tooler.py", line 162, in get_element
     return self.browser.find_element(*locator)
@@ -30,104 +12,6 @@ Traceback (most recent call last):
     self.error_handler.check_response(response)
   File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
     raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="jingtaimima"]/a"}
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()="运营"]"}
   (Session info: chrome=90.0.4430.212)
 
-2021-05-31 17:31:14,848 Mario.selenium Key_word_tooler.py [line:40] ERROR  打开指定浏览器失败，自动打开谷歌浏览器～错误信息
-2021-05-31 17:31:18,839 Mario.selenium Key_word_tooler.py [line:106] INFO  首页-登录:正在打开网址:https://bk-test.gtmsh.com/admin/welcome
-2021-05-31 17:31:20,806 Mario.selenium Key_word_tooler.py [line:211] INFO  首页-登录:强制等待中，共计3秒
-2021-05-31 17:31:23,810 Mario.selenium Key_word_tooler.py [line:160] INFO  首页-登录:查找元素：('xpath', '//*[@id="jingtaimima"]/a')
-2021-05-31 17:31:23,821 Mario.selenium Key_word_tooler.py [line:164] ERROR  查找元素失败！
-Traceback (most recent call last):
-  File "/Users/air/PycharmProjects/GtmshApiTestFrame/Comm/Key_word_tooler.py", line 162, in get_element
-    return self.browser.find_element(*locator)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 976, in find_element
-    return self.execute(Command.FIND_ELEMENT, {
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="jingtaimima"]/a"}
-  (Session info: chrome=90.0.4430.212)
-
-2021-05-31 17:32:28,164 Mario.selenium Key_word_tooler.py [line:40] ERROR  打开指定浏览器失败，自动打开谷歌浏览器～
-2021-05-31 17:32:31,296 Mario.selenium Key_word_tooler.py [line:106] INFO  首页-登录:正在打开网址:http://erp.gtmsh.com/ssoserver/login/welcome
-2021-05-31 17:32:32,062 Mario.selenium Key_word_tooler.py [line:211] INFO  首页-登录:强制等待中，共计3秒
-2021-05-31 17:32:35,065 Mario.selenium Key_word_tooler.py [line:160] INFO  首页-登录:查找元素：('xpath', '//*[@id="jingtaimima"]/a')
-2021-05-31 17:32:35,082 Mario.selenium Key_word_tooler.py [line:178] INFO  首页-登录:点击元素：('xpath', '//*[@id="jingtaimima"]/a')
-2021-05-31 17:32:35,124 Mario.selenium Key_word_tooler.py [line:160] INFO  首页-登录:查找元素：('id', 'username')
-2021-05-31 17:32:35,143 Mario.selenium Key_word_tooler.py [line:197] INFO  首页-登录:元素：('id', 'username')输入内容:V_wuyanwen
-2021-05-31 17:32:35,261 Mario.selenium Key_word_tooler.py [line:160] INFO  首页-登录:查找元素：('id', 'pwd')
-2021-05-31 17:32:35,279 Mario.selenium Key_word_tooler.py [line:197] INFO  首页-登录:元素：('id', 'pwd')输入内容:GT123
-2021-05-31 17:34:27,067 Mario.selenium Key_word_tooler.py [line:40] ERROR  打开指定浏览器失败，自动打开谷歌浏览器～
-2021-05-31 17:34:30,013 Mario.selenium Key_word_tooler.py [line:106] INFO  首页-登录:正在打开网址:http://erp.gtmsh.com/ssoserver/login/welcome
-2021-05-31 17:34:31,509 Mario.selenium Key_word_tooler.py [line:211] INFO  首页-登录:强制等待中，共计3秒
-2021-05-31 17:34:34,513 Mario.selenium Key_word_tooler.py [line:160] INFO  首页-登录:查找元素：('xpath', '//*[@id="jingtaimima"]/a')
-2021-05-31 17:34:34,533 Mario.selenium Key_word_tooler.py [line:178] INFO  首页-登录:点击元素：('xpath', '//*[@id="jingtaimima"]/a')
-2021-05-31 17:34:34,580 Mario.selenium Key_word_tooler.py [line:160] INFO  首页-登录:查找元素：('id', 'username')
-2021-05-31 17:34:34,595 Mario.selenium Key_word_tooler.py [line:197] INFO  首页-登录:元素：('id', 'username')输入内容:V_wuyanwen
-2021-05-31 17:34:34,718 Mario.selenium Key_word_tooler.py [line:160] INFO  首页-登录:查找元素：('id', 'pwd')
-2021-05-31 17:34:34,735 Mario.selenium Key_word_tooler.py [line:197] INFO  首页-登录:元素：('id', 'pwd')输入内容:GT123
-2021-05-31 17:40:55,111 Mario.selenium Key_word_tooler.py [line:40] ERROR  打开指定浏览器失败，自动打开谷歌浏览器～
-2021-05-31 17:40:58,037 Mario.selenium Key_word_tooler.py [line:106] INFO  首页-登录:正在打开网址:http://erp.gtmsh.com/ssoserver/login/welcome
-2021-05-31 17:40:58,968 Mario.selenium Key_word_tooler.py [line:211] INFO  首页-登录:强制等待中，共计3秒
-2021-05-31 17:41:01,969 Mario.selenium Key_word_tooler.py [line:160] INFO  首页-登录:查找元素：('xpath', '//*[@id="jingtaimima"]/a')
-2021-05-31 17:41:01,984 Mario.selenium Key_word_tooler.py [line:178] INFO  首页-登录:点击元素：('xpath', '//*[@id="jingtaimima"]/a')
-2021-05-31 17:41:02,024 Mario.selenium Key_word_tooler.py [line:160] INFO  首页-登录:查找元素：('id', 'username')
-2021-05-31 17:41:02,035 Mario.selenium Key_word_tooler.py [line:197] INFO  首页-登录:元素：('id', 'username')输入内容:V_wuyanwen
-2021-05-31 17:41:02,153 Mario.selenium Key_word_tooler.py [line:160] INFO  首页-登录:查找元素：('id', 'pwd')
-2021-05-31 17:41:02,166 Mario.selenium Key_word_tooler.py [line:197] INFO  首页-登录:元素：('id', 'pwd')输入内容:GT123
-2021-05-31 17:41:50,162 Mario.selenium Key_word_tooler.py [line:40] ERROR  打开指定浏览器失败，自动打开谷歌浏览器～
-2021-05-31 17:41:53,197 Mario.selenium Key_word_tooler.py [line:106] INFO  首页-登录:正在打开网址:http://erp.gtmsh.com/ssoserver/login/welcome
-2021-05-31 17:41:54,089 Mario.selenium Key_word_tooler.py [line:211] INFO  首页-登录:强制等待中，共计3秒
-2021-05-31 17:41:57,091 Mario.selenium Key_word_tooler.py [line:160] INFO  首页-登录:查找元素：('xpath', '//*[@id="jingtaimima"]/a')
-2021-05-31 17:41:57,106 Mario.selenium Key_word_tooler.py [line:178] INFO  首页-登录:点击元素：('xpath', '//*[@id="jingtaimima"]/a')
-2021-05-31 17:41:57,152 Mario.selenium Key_word_tooler.py [line:160] INFO  首页-登录:查找元素：('id', 'username')
-2021-05-31 17:41:57,170 Mario.selenium Key_word_tooler.py [line:197] INFO  首页-登录:元素：('id', 'username')输入内容:V_wuyanwen
-2021-05-31 17:41:57,296 Mario.selenium Key_word_tooler.py [line:160] INFO  首页-登录:查找元素：('id', 'pwd')
-2021-05-31 17:41:57,310 Mario.selenium Key_word_tooler.py [line:197] INFO  首页-登录:元素：('id', 'pwd')输入内容:GT123
-2021-05-31 17:41:57,394 Mario.selenium Key_word_tooler.py [line:211] INFO  :强制等待中，共计10秒
-2021-05-31 17:43:15,779 Mario.selenium Key_word_tooler.py [line:40] ERROR  打开指定浏览器失败，自动打开谷歌浏览器～
-2021-05-31 17:43:19,114 Mario.selenium Key_word_tooler.py [line:106] INFO  首页-登录:正在打开网址:http://erp.gtmsh.com/ssoserver/login/welcome
-2021-05-31 17:43:19,991 Mario.selenium Key_word_tooler.py [line:211] INFO  首页-登录:强制等待中，共计3秒
-2021-05-31 17:43:22,994 Mario.selenium Key_word_tooler.py [line:160] INFO  首页-登录:查找元素：('xpath', '//*[@id="jingtaimima"]/a')
-2021-05-31 17:43:23,009 Mario.selenium Key_word_tooler.py [line:178] INFO  首页-登录:点击元素：('xpath', '//*[@id="jingtaimima"]/a')
-2021-05-31 17:43:23,060 Mario.selenium Key_word_tooler.py [line:160] INFO  首页-登录:查找元素：('id', 'username')
-2021-05-31 17:43:23,074 Mario.selenium Key_word_tooler.py [line:197] INFO  首页-登录:元素：('id', 'username')输入内容:V_wuyanwen
-2021-05-31 17:43:23,188 Mario.selenium Key_word_tooler.py [line:160] INFO  首页-登录:查找元素：('id', 'pwd')
-2021-05-31 17:43:23,207 Mario.selenium Key_word_tooler.py [line:197] INFO  首页-登录:元素：('id', 'pwd')输入内容:GT123
-2021-05-31 17:43:23,272 Mario.selenium Key_word_tooler.py [line:211] INFO  首页-登录:强制等待中，共计3秒
-2021-05-31 17:43:26,904 Mario.selenium Key_word_tooler.py [line:211] INFO  首页-登录:强制等待中，共计3秒
-2021-05-31 17:43:29,907 Mario.selenium Key_word_tooler.py [line:114] INFO  首页-登录:正在关闭浏览器～
-2021-05-31 17:45:06,379 Mario.selenium Key_word_tooler.py [line:40] ERROR  打开指定浏览器失败，自动打开谷歌浏览器～
-2021-05-31 17:45:09,584 Mario.selenium Key_word_tooler.py [line:106] INFO  首页-登录:正在打开网址:http://erp.gtmsh.com/ssoserver/login/welcome
-2021-05-31 17:45:10,289 Mario.selenium Key_word_tooler.py [line:211] INFO  首页-登录:强制等待中，共计3秒
-2021-05-31 17:45:13,289 Mario.selenium Key_word_tooler.py [line:160] INFO  首页-登录:查找元素：('xpath', '//*[@id="jingtaimima"]/a')
-2021-05-31 17:45:13,305 Mario.selenium Key_word_tooler.py [line:178] INFO  首页-登录:点击元素：('xpath', '//*[@id="jingtaimima"]/a')
-2021-05-31 17:45:13,347 Mario.selenium Key_word_tooler.py [line:160] INFO  首页-登录:查找元素：('id', 'username')
-2021-05-31 17:45:13,357 Mario.selenium Key_word_tooler.py [line:197] INFO  首页-登录:元素：('id', 'username')输入内容:V_wuyanwen
-2021-05-31 17:45:13,469 Mario.selenium Key_word_tooler.py [line:160] INFO  首页-登录:查找元素：('id', 'pwd')
-2021-05-31 17:45:13,483 Mario.selenium Key_word_tooler.py [line:197] INFO  首页-登录:元素：('id', 'pwd')输入内容:GT123
-2021-05-31 17:45:13,549 Mario.selenium Key_word_tooler.py [line:211] INFO  首页-登录:强制等待中，共计3秒
-2021-05-31 18:04:22,173 Mario.selenium Key_word_tooler.py [line:40] ERROR  打开指定浏览器失败，自动打开谷歌浏览器～
-2021-05-31 18:04:26,372 Mario.selenium Key_word_tooler.py [line:106] INFO  首页-登录:正在打开网址:http://erp.gtmsh.com/ssoserver/login/welcome
-2021-05-31 18:04:27,851 Mario.selenium Key_word_tooler.py [line:211] INFO  首页-登录:强制等待中，共计3秒
-2021-05-31 18:04:30,856 Mario.selenium Key_word_tooler.py [line:160] INFO  首页-登录:查找元素：('xpath', '//*[@id="jingtaimima"]/a')
-2021-05-31 18:04:30,874 Mario.selenium Key_word_tooler.py [line:178] INFO  首页-登录:点击元素：('xpath', '//*[@id="jingtaimima"]/a')
-2021-05-31 18:04:30,926 Mario.selenium Key_word_tooler.py [line:160] INFO  首页-登录:查找元素：('id', 'username')
-2021-05-31 18:04:30,941 Mario.selenium Key_word_tooler.py [line:197] INFO  首页-登录:元素：('id', 'username')输入内容:V_wuyanwen
-2021-05-31 18:04:31,091 Mario.selenium Key_word_tooler.py [line:160] INFO  首页-登录:查找元素：('id', 'pwd')
-2021-05-31 18:04:31,107 Mario.selenium Key_word_tooler.py [line:197] INFO  首页-登录:元素：('id', 'pwd')输入内容:GT123
-2021-05-31 18:04:31,190 Mario.selenium Key_word_tooler.py [line:211] INFO  首页-登录:强制等待中，共计3秒
-2021-05-31 18:07:33,221 Mario.selenium Key_word_tooler.py [line:40] ERROR  打开指定浏览器失败，自动打开谷歌浏览器～
-2021-05-31 18:07:36,254 Mario.selenium Key_word_tooler.py [line:106] INFO  首页-登录:正在打开网址:http://erp.gtmsh.com/ssoserver/login/welcome
-2021-05-31 18:07:37,045 Mario.selenium Key_word_tooler.py [line:211] INFO  首页-登录:强制等待中，共计3秒
-2021-05-31 18:07:40,049 Mario.selenium Key_word_tooler.py [line:160] INFO  首页-登录:查找元素：('xpath', '//*[@id="jingtaimima"]/a')
-2021-05-31 18:07:40,064 Mario.selenium Key_word_tooler.py [line:178] INFO  首页-登录:点击元素：('xpath', '//*[@id="jingtaimima"]/a')
-2021-05-31 18:07:40,107 Mario.selenium Key_word_tooler.py [line:160] INFO  首页-登录:查找元素：('id', 'username')
-2021-05-31 18:07:40,118 Mario.selenium Key_word_tooler.py [line:197] INFO  首页-登录:元素：('id', 'username')输入内容:V_wuyanwen
-2021-05-31 18:07:40,228 Mario.selenium Key_word_tooler.py [line:160] INFO  首页-登录:查找元素：('id', 'pwd')
-2021-05-31 18:07:40,240 Mario.selenium Key_word_tooler.py [line:197] INFO  首页-登录:元素：('id', 'pwd')输入内容:GT123
-2021-05-31 18:07:40,312 Mario.selenium Key_word_tooler.py [line:211] INFO  首页-登录:强制等待中，共计3秒
-2021-05-31 18:07:43,913 Mario.selenium Key_word_tooler.py [line:211] INFO  首页-登录:强制等待中，共计3秒
-2021-05-31 18:07:46,914 Mario.selenium Key_word_tooler.py [line:114] INFO  首页-登录:正在关闭浏览器～
